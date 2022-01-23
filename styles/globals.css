@@ -19,3 +19,7 @@ div {
   display: flex;
   justify-content: center;
 }
+
+main {
+  text-align: center;
+}
