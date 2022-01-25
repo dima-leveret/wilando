@@ -1,7 +1,19 @@
 import Link from "next/link";
-import styles from '../styles/NotFound.module.css'
+import { useEffect } from "react";
+import { useRouter } from "next/router";
+
+import styles from '../styles/NotFound.module.css';
 
 const NotFound = () => {
+  const router = useRouter();
+
+  useEffect(() => {
+    console.log('use effect runs');
+    setTimeout(() => {
+      router.push('/')
+    }, 5000)
+  }, [])
+
     return (
       <div className={styles.container}>
         <h1>Oooooops...</h1>
