@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 
 function Header() {
@@ -7,7 +8,7 @@ function Header() {
     return (
       <header>
         <Link href="/">
-          <img className="logo" src="/logo-wilando2.jpg" alt="wilando logo"/>
+          <Image className="logo" src="/logo-wilando2.jpg" width={300} height={150}/>
         </Link>
         <nav>
           <Link href="/">
