@@ -8,7 +8,7 @@ function Header() {
     return (
       <header>
         <Link href="/">
-          <Image className="logo" src="/logo-wilando2.jpg" width={300} height={150}/>
+          <Image className="logo" src="/logo-willando-small-size2.png" width={300} height={150}/>
         </Link>
         <nav>
           <Link href="/">
