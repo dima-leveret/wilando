@@ -26,13 +26,13 @@ function Galery({ photos }) {
         <h2>Galeria</h2>
         <div className={styles.photos}>
           {photos.map((photo) =>
-            photo.albumId === 1 ? (
+            photo.albumId === 1 && (
               <img
                 className={styles.photo}
                 key={photo.id}
                 src={photo.url}
               />
-            ) : null
+            )
           )}
         </div>
       </>
