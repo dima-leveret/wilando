@@ -24,25 +24,28 @@ function Header() {
           />
         </a>
       </Link>
-      <div className={burgerMenu ? styles.navBarActive : styles.navBar}>
+      <div
+        className={burgerMenu ? styles.navBarActive : styles.navBar}
+        onClick={closeBurgerMenu}
+      >
         <nav className={styles.nav}>
           <Link href="/">
-            <a onClick={showBugerMenu}>Główna</a>
+            <a>Główna</a>
           </Link>
           <Link href="/galery">
-            <a onClick={showBugerMenu}>Galeria</a>
+            <a>Galeria</a>
           </Link>
           <Link href="/for-whom">
-            <a onClick={showBugerMenu}>Dla kogo</a>
+            <a>Dla kogo</a>
           </Link>
           <Link href="/price-list">
-            <a onClick={showBugerMenu}>Cennik</a>
+            <a>Cennik</a>
           </Link>
           <Link href="/about-us">
-            <a onClick={showBugerMenu}>O nas</a>
+            <a>O nas</a>
           </Link>
           <Link href="/contact">
-            <a onClick={showBugerMenu}>Kontakt</a>
+            <a>Kontakt</a>
           </Link>
         </nav>
       </div>
