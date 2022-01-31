@@ -64,10 +64,10 @@
     }
 
     .navBar {
-        top: 0;
-        position: fixed;
         right: -100%;
         transition: 0.5s;
+        top: 0;
+        position: fixed;
         background-color: white;
         max-width: unset;
         width: 100%;
@@ -76,6 +76,9 @@
         z-index: 1;
         border: 1px solid black;
         border-radius: 20px;
+
+        display: flex;
+        justify-content: right;
     }
 
     .navBarActive {
@@ -83,36 +86,40 @@
         transition: 0.5s;
         top: 0;
         position: fixed;
-        background-color: white;
+        background: rgba(0, 0, 0, .6);
         max-width: unset;
         width: 100%;
         height: 100%;
         margin-top: 115px;
-        z-index: 1;
         border: 1px solid black;
         border-radius: 20px;
+
+        display: flex;
+        justify-content: right;
+
     }
 
     .nav {
         width: 70%;
-        height: 70%;
+        height: 50%;
         flex-direction: column;
         align-items: unset;
         text-align: center;
-        z-index: 1;
-        margin-top: 20px;
+        border-radius: 15px;
     }
+
 
     .nav a {
         display: flex;
         height: 50px;
         align-items: center;
         justify-content: center;
+        background-color: white;
     }
 
     .burgerIcon {
-    display: block;
-    font-size: 50px;
-}
+        display: block;
+        font-size: 50px;
+    }
 
 }
