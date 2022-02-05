@@ -5,12 +5,21 @@ import styles from "../styles/Header.module.css";
 import { useState } from "react";
 import * as GoIcons from "react-icons/go";
 
+import disableScroll from "disable-scroll";
+
 function Header() {
   const [burgerMenu, setBurgerMenu] = useState(false);
 
-  const showBugerMenu = () => setBurgerMenu(!burgerMenu);
+  const showBugerMenu = () => {
+    setBurgerMenu(!burgerMenu);
 
-  const closeBurgerMenu = () => setBurgerMenu(false);
+    disableScroll[burgerMenu ? "off" : "on"]();
+  };
+
+  const closeBurgerMenu = () => {
+    setBurgerMenu(false);
+    disableScroll.off();
+  };
 
   return (
     <header className={styles.header}>
