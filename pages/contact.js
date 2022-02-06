@@ -1,4 +1,5 @@
 import Head from "next/head";
+import EmailJsForm from "../components/EmailJsForm";
 
 function Contact () {
     return (
@@ -9,6 +10,8 @@ function Contact () {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <h2>Contact</h2>
+
+        <EmailJsForm/>
       </>
     );
 }
