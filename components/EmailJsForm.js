@@ -8,6 +8,8 @@ function EmailJsForm() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
+    // my dev sending form
+
     emailjs
       .sendForm(
         "service_7hy6glp",
@@ -23,6 +25,24 @@ function EmailJsForm() {
           console.log(error.text);
         }
       );
+
+    //wilando send form data
+
+    // emailjs
+    //   .sendForm(
+    //     "wilando",
+    //     "wilando_template",
+    //     form.current,
+    //     "tED3CE09EFY-bbhDb"
+    //   )
+    //   .then(
+    //     (result) => {
+    //       console.log(result.text);
+    //     },
+    //     (error) => {
+    //       console.log(error.text);
+    //     }
+    //   );
 
     form.current.reset();
   };
