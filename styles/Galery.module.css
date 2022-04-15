@@ -1,13 +1,14 @@
-.photos {
+.images {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 12px;
 }
 
-.photo {
+.image {
     max-width: 300px;
     width: 100%;
     border-radius: 10px;
-    margin: 5px;
+    
 }
