@@ -1,12 +1,47 @@
 import React from "react";
 import Head from "next/head";
+import { useEffect, useState } from "react";
 
 import styles from "../styles/Galery.module.css";
 
+import { search, mapImageResources } from "../src/lib/coudinary";
+
 import CloudinaryGalery from "../components/CloudinaryGalery";
 
-function Galery({ images }) {
+function Galery({ images: defaultImages, nextCursor: defaultNextCursor }) {
+
+  const [images, setImages] = useState(defaultImages);
+  const [nextCursor, setNextCursor] = useState(defaultNextCursor);
+
   console.log(images);
+  console.log(nextCursor);
+
+  const hadleLoadMore = async (e) => {
+    e.preventDefault();
+
+    const results = await fetch('/api/search', {
+      method: 'POST',
+      body: JSON.stringify({
+        nextCursor
+      })
+    }).then(r => r.json());
+    console.log('results => ', results);
+
+    const { resources, next_cursor: upadatedNextCursor } = results;
+
+    const images = mapImageResources(resources);
+
+    setImages(prev => {
+      return [
+        ...prev,
+        ...images
+      ]
+    });
+
+    setNextCursor(upadatedNextCursor);
+
+  }
+
   return (
     <>
       <Head>
@@ -30,6 +65,7 @@ function Galery({ images }) {
           );
         })}
       </div>
+      <button onClick={hadleLoadMore} >Load more</button>
     </>
   );
 }
@@ -37,34 +73,18 @@ function Galery({ images }) {
 export default Galery;
 
 export const getStaticProps = async () => {
-  const results = await fetch(
-    `https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_CLOUD_NAME}/resources/image`,
-    {
-      headers: {
-        Authorization: `Basic ${Buffer.from(
-          process.env.CLOUDINARY_API_KEY +
-            ":" +
-            process.env.CLOUDINARY_API_SECRET
-        ).toString("base64")}`,
-      },
-    }
-  ).then((r) => r.json());
+  const results = await search();
 
   console.log("reults", results);
 
-  const { resources } = results;
+  const { resources, next_cursor: nextCursor } = results;
 
-  const images = resources.map((resource) => {
-    return {
-      id: resource.asset_id,
-      title: resource.public_id,
-      image: resource.secure_url,
-      width: resource.width,
-      height: resource.height,
-    };
-  });
+  const images = mapImageResources(resources);
 
   return {
-    props: { images },
+    props: { 
+      images,
+      nextCursor 
+    },
   };
 };
