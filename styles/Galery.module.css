@@ -4,6 +4,8 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 12px;
+
+    margin-bottom: 20px;
 }
 
 .imgContainer {
@@ -12,6 +14,10 @@
 
     max-width: 300px;
     width: 100%;
+
+    background-color: lightgray;
+
+    
 }
 
 .image {

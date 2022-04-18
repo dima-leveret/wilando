@@ -1,41 +1,11 @@
 import React from "react";
 import Head from "next/head";
-import { useEffect, useState } from "react";
-
-import styles from "../styles/Galery.module.css";
 
 import { search, mapImageResources } from "../src/lib/coudinary";
 
 import CloudinaryGalery from "../components/CloudinaryGalery";
 
-function Galery({ images: defaultImages, nextCursor: defaultNextCursor }) {
-  const [images, setImages] = useState(defaultImages);
-  const [nextCursor, setNextCursor] = useState(defaultNextCursor);
-
-  console.log(images);
-  console.log(nextCursor);
-
-  const hadleLoadMore = async (e) => {
-    e.preventDefault();
-
-    const results = await fetch("/api/search", {
-      method: "POST",
-      body: JSON.stringify({
-        nextCursor,
-      }),
-    }).then((r) => r.json());
-    console.log("results => ", results);
-
-    const { resources, next_cursor: upadatedNextCursor } = results;
-
-    const images = mapImageResources(resources);
-
-    setImages((prev) => {
-      return [...prev, ...images];
-    });
-
-    setNextCursor(upadatedNextCursor);
-  };
+function Galery({ images, nextCursor }) {
 
   return (
     <>
@@ -45,23 +15,8 @@ function Galery({ images: defaultImages, nextCursor: defaultNextCursor }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <CloudinaryGalery />
+      <CloudinaryGalery images={images} nextCursor={nextCursor} />
 
-      <h2>Galeria</h2>
-      <div className={styles.images}>
-        {images.map((image) => {
-          return (
-            <div key={image.id} className={styles.imgContainer}>
-              <img
-                alt={image.title}
-                src={image.image}
-                className={styles.image}
-              />
-            </div>
-          );
-        })}
-      </div>
-      <button onClick={hadleLoadMore}>Load more</button>
     </>
   );
 }
