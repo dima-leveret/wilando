@@ -9,7 +9,6 @@ import { search, mapImageResources } from "../src/lib/coudinary";
 import CloudinaryGalery from "../components/CloudinaryGalery";
 
 function Galery({ images: defaultImages, nextCursor: defaultNextCursor }) {
-
   const [images, setImages] = useState(defaultImages);
   const [nextCursor, setNextCursor] = useState(defaultNextCursor);
 
@@ -19,28 +18,24 @@ function Galery({ images: defaultImages, nextCursor: defaultNextCursor }) {
   const hadleLoadMore = async (e) => {
     e.preventDefault();
 
-    const results = await fetch('/api/search', {
-      method: 'POST',
+    const results = await fetch("/api/search", {
+      method: "POST",
       body: JSON.stringify({
-        nextCursor
-      })
-    }).then(r => r.json());
-    console.log('results => ', results);
+        nextCursor,
+      }),
+    }).then((r) => r.json());
+    console.log("results => ", results);
 
     const { resources, next_cursor: upadatedNextCursor } = results;
 
     const images = mapImageResources(resources);
 
-    setImages(prev => {
-      return [
-        ...prev,
-        ...images
-      ]
+    setImages((prev) => {
+      return [...prev, ...images];
     });
 
     setNextCursor(upadatedNextCursor);
-
-  }
+  };
 
   return (
     <>
@@ -56,16 +51,17 @@ function Galery({ images: defaultImages, nextCursor: defaultNextCursor }) {
       <div className={styles.images}>
         {images.map((image) => {
           return (
-            <img
-              key={image.id}
-              alt={image.title}
-              src={image.image}
-              className={styles.image}
-            />
+            <div key={image.id} className={styles.imgContainer}>
+              <img
+                alt={image.title}
+                src={image.image}
+                className={styles.image}
+              />
+            </div>
           );
         })}
       </div>
-      <button onClick={hadleLoadMore} >Load more</button>
+      <button onClick={hadleLoadMore}>Load more</button>
     </>
   );
 }
@@ -82,9 +78,9 @@ export const getStaticProps = async () => {
   const images = mapImageResources(resources);
 
   return {
-    props: { 
+    props: {
       images,
-      nextCursor 
+      nextCursor,
     },
   };
 };
