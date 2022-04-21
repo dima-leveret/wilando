@@ -1,9 +1,10 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import styles from "../styles/EmailJsForm.module.css";
 import emailjs from "emailjs-com";
 
 function EmailJsForm() {
   const form = useRef();
+  const [status, setStatus] = useState();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -20,10 +21,12 @@ function EmailJsForm() {
       .then(
         (result) => {
           console.log(result.text);
+          setStatus(result);
         },
         (error) => {
           console.log(error.text);
         }
+
       );
 
     //wilando send form data
@@ -38,6 +41,7 @@ function EmailJsForm() {
     //   .then(
     //     (result) => {
     //       console.log(result.text);
+    //       setStatus(result);
     //     },
     //     (error) => {
     //       console.log(error.text);
@@ -50,6 +54,14 @@ function EmailJsForm() {
   return (
     <>
       <h3>Wyslij nam wiadomość</h3>
+
+      {
+        !status
+        ?
+        null
+        :
+        <p>Success! Thanks for your message!</p>
+      }
 
       <form className={styles.form} onSubmit={handleSubmit} ref={form}>
         <label htmlFor="name">Name</label>
