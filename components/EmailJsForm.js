@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import styles from "../styles/EmailJsForm.module.css";
-
-import { sendMail } from "../src/lib/emailjs"
+import emailjs from "emailjs-com";
 
 function EmailJsForm() {
   const form = useRef();
@@ -11,32 +10,30 @@ function EmailJsForm() {
 
     //my dev sending form
 
-    sendMail(form.current);
-
-    // emailjs
-    //   .sendForm(
-    //     `${process.env.DIMA_EMAILJS_SERVICE_ID}`,
-    //     `${process.env.DIMA_EMAILJS_TEMPLATE_ID}`,
-    //     form.current,
-    //     `${DIMA_EMAILJS_PUBLIC_KEY}`
-    //   )
-    //   .then(
-    //     (result) => {
-    //       console.log(result.text);
-    //     },
-    //     (error) => {
-    //       console.log(error.text);
-    //     }
-    //   );
+    emailjs
+      .sendForm(
+        `${process.env.NEXT_PUBLIC_DIMA_EMAILJS_SERVICE_ID}`,
+        `${process.env.NEXT_PUBLIC_DIMA_EMAILJS_TEMPLATE_ID}`,
+        form.current,
+        `${process.env.NEXT_PUBLIC_DIMA_EMAILJS_PUBLIC_KEY}`
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
 
     //wilando send form data
 
     // emailjs
     //   .sendForm(
-    //     "wilando",
-    //     "wilando_template",
+    //     `${process.env.NEXT_PUBLIC_WILANDO_EMAILJS_SERVICE_ID}`,
+    //     `${process.env.NEXT_PUBLIC_WILANDO_EMAILJS_TEMPLATE_ID}`,
     //     form.current,
-    //     "tED3CE09EFY-bbhDb"
+    //     `${process.env.NEXT_PUBLIC_WILANDO_EMAILJS_PUBLIC_KEY}`
     //   )
     //   .then(
     //     (result) => {
