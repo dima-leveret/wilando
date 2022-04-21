@@ -11,7 +11,7 @@ function Contact () {
         </Head>
         <h2>Contact</h2>
 
-        <EmailJsForm/>
+        <EmailJsForm />
       </>
     );
 }

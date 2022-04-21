@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
-import emailjs from "emailjs-com";
 import styles from "../styles/EmailJsForm.module.css";
+
+import { sendMail } from "../src/lib/emailjs"
 
 function EmailJsForm() {
   const form = useRef();
@@ -8,23 +9,25 @@ function EmailJsForm() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    // my dev sending form
+    //my dev sending form
 
-    emailjs
-      .sendForm(
-        "service_7hy6glp",
-        "template_fr9zm0r",
-        form.current,
-        "user_QB1g2D1ptO4BlQ3jxP4Es"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    sendMail(form.current);
+
+    // emailjs
+    //   .sendForm(
+    //     `${process.env.DIMA_EMAILJS_SERVICE_ID}`,
+    //     `${process.env.DIMA_EMAILJS_TEMPLATE_ID}`,
+    //     form.current,
+    //     `${DIMA_EMAILJS_PUBLIC_KEY}`
+    //   )
+    //   .then(
+    //     (result) => {
+    //       console.log(result.text);
+    //     },
+    //     (error) => {
+    //       console.log(error.text);
+    //     }
+    //   );
 
     //wilando send form data
 
