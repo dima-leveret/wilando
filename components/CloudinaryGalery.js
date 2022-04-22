@@ -51,7 +51,14 @@ const CloudinaryGalery = ({ images: defaultImages, nextCursor: defaultNextCursor
           );
         })}
       </div>
-      <button onClick={hadleLoadMore}>Load more</button>
+      {
+        nextCursor
+        ?
+        <button onClick={hadleLoadMore}>Load more</button>
+        :
+        <p>There are all images we have 😃</p>
+      }
+      
     </>
   );
 };
