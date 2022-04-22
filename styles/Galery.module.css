@@ -6,6 +6,8 @@
     gap: 12px;
 
     margin-bottom: 20px;
+
+    /* background-color: lightgray; */
 }
 
 .imgContainer {
@@ -15,9 +17,7 @@
     max-width: 300px;
     width: 100%;
 
-    background-color: lightgray;
-
-    
+    border: 1px dashed;
 }
 
 .image {
