@@ -3,7 +3,7 @@ import HeadComponent from "../components/HeadComponent"
 
 export default function Home() {
   return (
-    <div>
+    <>
       <HeadComponent title="Wilando" />
 
       <main>
@@ -18,6 +18,6 @@ export default function Home() {
           pomieszczenia. Jedynym ograniczeniem jest twoja własna wyobrażnia.
         </p>
       </main>
-    </div>
+    </>
   );
 }
