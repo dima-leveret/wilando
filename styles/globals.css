@@ -14,12 +14,3 @@ a {
 * {
   box-sizing: border-box;
 }
-
-div {
-  display: flex;
-  justify-content: center;
-}
-
-main {
-  text-align: center;
-}

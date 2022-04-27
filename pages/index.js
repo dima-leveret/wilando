@@ -1,10 +1,14 @@
-import HeadComponent from "../components/HeadComponent"
+import HeadComponent from "../components/HeadComponent";
+
+import Slider from "../components/Sider";
 
 
 export default function Home() {
   return (
-    <div>
+    <>
       <HeadComponent title="Wilando" />
+
+      <Slider />
 
       <main>
         <h1>Witamy w świece unikalnych technologij dekoru!</h1>
@@ -18,6 +22,6 @@ export default function Home() {
           pomieszczenia. Jedynym ograniczeniem jest twoja własna wyobrażnia.
         </p>
       </main>
-    </div>
+    </>
   );
 }

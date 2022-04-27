@@ -1,12 +1,27 @@
-.content {
+.layout {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 180px;
+}
+
+.layoutContainer {
     max-width: 1500px;
     width: 100%;
-    margin-top: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     border: 1px solid black;
     border-radius: 15px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
 }
 
 @media only screen and (max-width: 800px) {
