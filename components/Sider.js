@@ -12,7 +12,7 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 
 const Slider = () => {
   return (
-    <div className={styles.sliderContainer}>
+    <div className={styles.sliderContainer} >
       <Swiper
         loop={true}
         spaceBetween={30}
