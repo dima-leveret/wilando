@@ -9,3 +9,10 @@
     width: 100%;
     height: 500px;
 }
+
+
+.sliderImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

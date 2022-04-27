@@ -30,17 +30,20 @@ const Slider = () => {
       >
         <SwiperSlide>
           <div className={styles.sliderImg}>
-            <Image priority src="/logo-wilando2.jpg" layout="fill" />
+              slide 1
+            {/* <Image priority src="/logo-wilando2.jpg" layout="fill" /> */}
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={styles.sliderImg}>
-            <Image src="/logo-wilando2.jpg" layout="fill" />
+                slide 2
+            {/* <Image src="/logo-wilando2.jpg" layout="fill" /> */}
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={styles.sliderImg}>
-            <Image src="/logo-wilando2.jpg" layout="fill" />
+              slide 3
+            {/* <Image src="/logo-wilando2.jpg" layout="fill" /> */}
           </div>
         </SwiperSlide>
       </Swiper>
