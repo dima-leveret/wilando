@@ -1,10 +1,12 @@
-import HeadComponent from "../components/HeadComponent"
-
+import HeadComponent from "../components/HeadComponent";
+import Slider from "../components/Slider";
 
 export default function Home() {
   return (
     <>
       <HeadComponent title="Wilando" />
+
+      <Slider />
 
       <main>
         <h1>Witamy w świece unikalnych technologij dekoru!</h1>
