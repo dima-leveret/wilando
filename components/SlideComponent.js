@@ -6,7 +6,6 @@ const SlideComponent = () => {
             <div className={styles.imgContainer} >
                 <img src="/logo-wilando2.jpg" alt="logo" /> 
             </div>
-            
         </div>
     );
 }
