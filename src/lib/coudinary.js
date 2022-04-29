@@ -32,7 +32,8 @@ export function mapImageResources(resources) {
         return {
           id: resource.asset_id,
           title: resource.public_id,
-          image: resource.secure_url,
+          original: resource.secure_url,
+          thumbnail: resource.secure_url,
           width: resource.width,
           height: resource.height,
         };

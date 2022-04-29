@@ -44,7 +44,7 @@ const CloudinaryGalery = ({ images: defaultImages, nextCursor: defaultNextCursor
             <div key={image.id} className={styles.imgContainer}>
               <img
                 alt={image.title}
-                src={image.image}
+                src={image.original}
                 className={styles.image}
               />
             </div>
