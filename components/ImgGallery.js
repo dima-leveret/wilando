@@ -7,6 +7,7 @@ import styles from "../styles/ImgGallery.module.css";
 
 const ImgGallery = ({ images }) => {
   const [gallery, setGallery] = useState([]);
+  const [isFullScreen, setIsFullScreen] = useState(false)
 
   const imagesGalleryProps = useRef();
   console.log("imagesGalleryProps ref =>", imagesGalleryProps.current);
@@ -18,27 +19,27 @@ const ImgGallery = ({ images }) => {
   }, []);
 
   const showFullScreen = () => {
-    // if (fullScreen.current.state.isFullscreen) {
-    //   fullScreen.current.exitFullScreen();
-    // } else {
-    //   fullScreen.current.fullScreen();
-    // }
-  };
-
-  const onBtnClick = () => {
-    imagesGalleryProps.current.fullScreen();
-    imagesGalleryProps.current.state.currentIndex = 5
+    if (imagesGalleryProps.current.state.isFullscreen) {
+      imagesGalleryProps.current.exitFullScreen();
+      setIsFullScreen(false)
+    } else {
+      imagesGalleryProps.current.fullScreen();
+      imagesGalleryProps.current.state.currentIndex = 5;
+      setIsFullScreen(true);
+    }
   };
 
   return (
-    <div className={styles.gallery}>
-      <ImageGallery
-        ref={imagesGalleryProps}
-        items={gallery}
-        onClick={showFullScreen}
-      />
-      <button onClick={onBtnClick}>Img index 5</button>
-    </div>
+    <>
+      <div className={isFullScreen ? styles.galleryActive : styles.galleryHidden}>
+        <ImageGallery
+          ref={imagesGalleryProps}
+          items={gallery}
+          onClick={showFullScreen}
+        />
+      </div>
+      <button onClick={showFullScreen}>Img index 5</button>
+    </>
   );
 };
 
