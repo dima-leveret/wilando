@@ -7,7 +7,10 @@ import styles from "../styles/ImgGallery.module.css";
 
 const ImgGallery = ({ images }) => {
   const [gallery, setGallery] = useState([]);
-  const [isFullScreen, setIsFullScreen] = useState(false)
+  const [isFullScreen, setIsFullScreen] = useState(false);
+
+  const [fullScreenBtn, setFullScreenBtn] = useState();
+  console.log(fullScreenBtn);
 
   const imagesGalleryProps = useRef();
   console.log("imagesGalleryProps ref =>", imagesGalleryProps.current);
@@ -16,18 +19,30 @@ const ImgGallery = ({ images }) => {
     setGallery((prev) => {
       return [...prev, ...images];
     });
+
+    const btn = document.querySelector(".image-gallery-fullscreen-button");
+    setFullScreenBtn(btn);
   }, []);
 
+  useEffect(() => {
+    
+  }, [])
+
   const showFullScreen = () => {
-    if (imagesGalleryProps.current.state.isFullscreen) {
-      imagesGalleryProps.current.exitFullScreen();
-      setIsFullScreen(false)
-    } else {
-      imagesGalleryProps.current.fullScreen();
-      imagesGalleryProps.current.state.currentIndex = 5;
-      setIsFullScreen(true);
-    }
+    imagesGalleryProps.current.fullScreen();
+    imagesGalleryProps.current.state.currentIndex = 5;
+    setIsFullScreen(true);
   };
+
+  const cloSeFullScreen = () => {
+    imagesGalleryProps.current.exitFullScreen();
+    setIsFullScreen(false)
+  }
+
+  fullScreenBtn?.addEventListener("click", () => {
+    cloSeFullScreen()
+    console.log('click');
+  })
 
   return (
     <>
@@ -35,7 +50,6 @@ const ImgGallery = ({ images }) => {
         <ImageGallery
           ref={imagesGalleryProps}
           items={gallery}
-          onClick={showFullScreen}
         />
       </div>
       <button onClick={showFullScreen}>Img index 5</button>
