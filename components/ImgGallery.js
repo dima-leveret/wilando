@@ -10,7 +10,6 @@ const ImgGallery = ({ images }) => {
   const [isFullScreen, setIsFullScreen] = useState(false);
 
   const [fullScreenBtn, setFullScreenBtn] = useState();
-  console.log(fullScreenBtn);
 
   const imagesGalleryProps = useRef();
   console.log("imagesGalleryProps ref =>", imagesGalleryProps.current);
@@ -22,11 +21,9 @@ const ImgGallery = ({ images }) => {
 
     const btn = document.querySelector(".image-gallery-fullscreen-button");
     setFullScreenBtn(btn);
-  }, []);
 
-  useEffect(() => {
-    
-  }, [])
+    document.addEventListener('keyup', escPressHendler)
+  }, []);
 
   const showFullScreen = () => {
     imagesGalleryProps.current.fullScreen();
@@ -36,20 +33,28 @@ const ImgGallery = ({ images }) => {
 
   const cloSeFullScreen = () => {
     imagesGalleryProps.current.exitFullScreen();
-    setIsFullScreen(false)
-  }
+    setIsFullScreen(false);
+  };
 
   fullScreenBtn?.addEventListener("click", () => {
-    cloSeFullScreen()
-    console.log('click');
-  })
+    cloSeFullScreen();
+  });
+
+  const escPressHendler = (e) => {
+    if (e.key === "Escape") {
+      cloSeFullScreen();
+    }
+  }
 
   return (
     <>
-      <div className={isFullScreen ? styles.galleryActive : styles.galleryHidden}>
+      <div
+        className={isFullScreen ? styles.galleryActive : styles.galleryHidden}
+      >
         <ImageGallery
-          ref={imagesGalleryProps}
-          items={gallery}
+          useBrowserFullscreen={false}
+         ref={imagesGalleryProps} 
+         items={gallery} 
         />
       </div>
       <button onClick={showFullScreen}>Img index 5</button>
