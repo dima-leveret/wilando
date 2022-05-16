@@ -4,8 +4,6 @@ import styles from "../styles/Galery.module.css";
 
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
-import imgGalleryStyles from "../styles/ImgGallery.module.css";
-
 
 const CloudinaryGalery = ({
   images: defaultImages,
@@ -15,43 +13,44 @@ const CloudinaryGalery = ({
   const [nextCursor, setNextCursor] = useState(defaultNextCursor);
 
   const [isFullScreen, setIsFullScreen] = useState(false);
-  const [fullScreenBtn, setFullScreenBtn] = useState();
+  const [imgIndex, setImgIndex] = useState()
 
   const imagesGalleryProps = useRef();
   console.log("imagesGalleryProps ref =>", imagesGalleryProps.current);
 
   useEffect(() => {
-    // setGallery(images);
+    document.addEventListener("keyup", (e) => {
+      if (e.key === "Escape") {
+        cloSeFullScreen();
+        console.log("esc");
+      }
+    });
 
-    const btn = document.querySelector(".image-gallery-fullscreen-button");
-    setFullScreenBtn(btn);
+    const fullScreenButton = document.querySelector(
+      ".image-gallery-fullscreen-button"
+    );
+    fullScreenButton.addEventListener("click", () => {
+      cloSeFullScreen();
+    });
 
-    document.addEventListener("keyup", escPressHendler);
-  }, [images]);
+    const rightNavButton = document.querySelector(".image-gallery-right-nav");
+
+    rightNavButton.addEventListener("click", (e) => {
+      e.preventDefault();
+      console.log('must be load more images');
+    });
+  }, []);
 
   const showFullScreen = (imgObj) => {
     imagesGalleryProps.current.fullScreen();
     imagesGalleryProps.current.state.currentIndex = images.indexOf(imgObj);
     setIsFullScreen(true);
-    console.log(images.length);
   };
 
   const cloSeFullScreen = () => {
     imagesGalleryProps.current.exitFullScreen();
     setIsFullScreen(false);
   };
-
-  fullScreenBtn?.addEventListener("click", () => {
-    cloSeFullScreen();
-  });
-
-  const escPressHendler = (e) => {
-    if (e.key === "Escape") {
-      cloSeFullScreen();
-    }
-  };
-
-  
 
   const hadleLoadMore = async (e) => {
     e.preventDefault();
@@ -77,14 +76,18 @@ const CloudinaryGalery = ({
 
   return (
     <>
-      
       <div
-        className={isFullScreen ? imgGalleryStyles.galleryActive : imgGalleryStyles.galleryHidden}
+        className={
+          isFullScreen
+            ? styles.galleryActive
+            : styles.galleryHidden
+        }
       >
         <ImageGallery
           useBrowserFullscreen={false}
           ref={imagesGalleryProps}
           items={images}
+          lazyLoad={true}
         />
       </div>
 
@@ -97,7 +100,11 @@ const CloudinaryGalery = ({
       <div className={styles.images}>
         {images.map((image) => {
           return (
-            <div key={image.id} className={styles.imgContainer} onClick={() => showFullScreen(image)}>
+            <div
+              key={image.id}
+              className={styles.imgContainer}
+              onClick={() => showFullScreen(image)}
+            >
               <img
                 alt={image.title}
                 src={image.original}
