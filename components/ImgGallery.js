@@ -5,9 +5,10 @@ import { useEffect, useState, useRef } from "react";
 
 import styles from "../styles/ImgGallery.module.css";
 
-const ImgGallery = ({ images }) => {
+const ImgGallery = ({ images, handleImgId }) => {
   const [gallery, setGallery] = useState([]);
   const [isFullScreen, setIsFullScreen] = useState(false);
+  console.log("gallery =>", gallery);
 
   const [fullScreenBtn, setFullScreenBtn] = useState();
 
@@ -15,19 +16,16 @@ const ImgGallery = ({ images }) => {
   console.log("imagesGalleryProps ref =>", imagesGalleryProps.current);
 
   useEffect(() => {
-    setGallery((prev) => {
-      return [...prev, ...images];
-    });
+    setGallery(images);
 
     const btn = document.querySelector(".image-gallery-fullscreen-button");
     setFullScreenBtn(btn);
 
-    document.addEventListener('keyup', escPressHendler)
-  }, []);
+    document.addEventListener("keyup", escPressHendler);
+  }, [images]);
 
   const showFullScreen = () => {
     imagesGalleryProps.current.fullScreen();
-    imagesGalleryProps.current.state.currentIndex = 5;
     setIsFullScreen(true);
   };
 
@@ -44,7 +42,7 @@ const ImgGallery = ({ images }) => {
     if (e.key === "Escape") {
       cloSeFullScreen();
     }
-  }
+  };
 
   return (
     <>
@@ -53,11 +51,11 @@ const ImgGallery = ({ images }) => {
       >
         <ImageGallery
           useBrowserFullscreen={false}
-         ref={imagesGalleryProps} 
-         items={gallery} 
+          ref={imagesGalleryProps}
+          items={gallery}
         />
       </div>
-      <button onClick={showFullScreen}>Img index 5</button>
+      <button onClick={showFullScreen}>Open galley</button>
     </>
   );
 };
