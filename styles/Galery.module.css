@@ -22,6 +22,11 @@
     
 }
 
+.imgContainer:hover {
+    opacity: 50%;
+    transition: 0.5s;
+}
+
 .image {
     width: 100%;
     border-radius: 10px;

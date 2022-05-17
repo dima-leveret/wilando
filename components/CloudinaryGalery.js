@@ -13,7 +13,6 @@ const CloudinaryGalery = ({
   const [nextCursor, setNextCursor] = useState(defaultNextCursor);
 
   const [isFullScreen, setIsFullScreen] = useState(false);
-  const [imgIndex, setImgIndex] = useState()
 
   const imagesGalleryProps = useRef();
   console.log("imagesGalleryProps ref =>", imagesGalleryProps.current);
@@ -32,13 +31,6 @@ const CloudinaryGalery = ({
     fullScreenButton.addEventListener("click", () => {
       cloSeFullScreen();
     });
-
-    const rightNavButton = document.querySelector(".image-gallery-right-nav");
-
-    rightNavButton.addEventListener("click", (e) => {
-      e.preventDefault();
-      console.log('must be load more images');
-    });
   }, []);
 
   const showFullScreen = (imgObj) => {
@@ -48,7 +40,7 @@ const CloudinaryGalery = ({
   };
 
   const cloSeFullScreen = () => {
-    imagesGalleryProps.current.exitFullScreen();
+    imagesGalleryProps?.current?.exitFullScreen();
     setIsFullScreen(false);
   };
 
@@ -77,11 +69,7 @@ const CloudinaryGalery = ({
   return (
     <>
       <div
-        className={
-          isFullScreen
-            ? styles.galleryActive
-            : styles.galleryHidden
-        }
+        className={isFullScreen ? styles.galleryActive : styles.galleryHidden}
       >
         <ImageGallery
           useBrowserFullscreen={false}
