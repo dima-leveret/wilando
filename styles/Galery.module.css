@@ -13,14 +13,29 @@
 .imgContainer {
     display: flex;
     align-items: center;
+    cursor: pointer;
 
     max-width: 300px;
     width: 100%;
 
     border: 1px dashed;
+    
+}
+
+.imgContainer:hover {
+    opacity: 50%;
+    transition: 0.5s;
 }
 
 .image {
     width: 100%;
     border-radius: 10px;
+}
+
+.galleryActive {
+    width: 100%;
+}
+
+.galleryHidden {
+    display: none;
 }

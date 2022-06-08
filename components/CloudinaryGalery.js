@@ -1,15 +1,48 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { mapImageResources } from "../src/lib/coudinary";
 import styles from "../styles/Galery.module.css";
 
+import ImageGallery from "react-image-gallery";
+import "react-image-gallery/styles/css/image-gallery.css";
 
-const CloudinaryGalery = ({ images: defaultImages, nextCursor: defaultNextCursor }) => {
-
+const CloudinaryGalery = ({
+  images: defaultImages,
+  nextCursor: defaultNextCursor,
+}) => {
   const [images, setImages] = useState(defaultImages);
   const [nextCursor, setNextCursor] = useState(defaultNextCursor);
 
-  console.log(images);
-  console.log(nextCursor);
+  const [isFullScreen, setIsFullScreen] = useState(false);
+
+  const imagesGalleryProps = useRef();
+  console.log("imagesGalleryProps ref =>", imagesGalleryProps.current);
+
+  useEffect(() => {
+    document.addEventListener("keyup", (e) => {
+      if (e.key === "Escape") {
+        cloSeFullScreen();
+        console.log("esc");
+      }
+    });
+
+    const fullScreenButton = document.querySelector(
+      ".image-gallery-fullscreen-button"
+    );
+    fullScreenButton.addEventListener("click", () => {
+      cloSeFullScreen();
+    });
+  }, []);
+
+  const showFullScreen = (imgObj) => {
+    imagesGalleryProps.current.fullScreen();
+    imagesGalleryProps.current.state.currentIndex = images.indexOf(imgObj);
+    setIsFullScreen(true);
+  };
+
+  const cloSeFullScreen = () => {
+    imagesGalleryProps?.current?.exitFullScreen();
+    setIsFullScreen(false);
+  };
 
   const hadleLoadMore = async (e) => {
     e.preventDefault();
@@ -35,30 +68,45 @@ const CloudinaryGalery = ({ images: defaultImages, nextCursor: defaultNextCursor
 
   return (
     <>
+      <div
+        className={isFullScreen ? styles.galleryActive : styles.galleryHidden}
+      >
+        <ImageGallery
+          useBrowserFullscreen={false}
+          ref={imagesGalleryProps}
+          items={images}
+          lazyLoad={true}
+        />
+      </div>
+
       <h2>Galery</h2>
-      <p>Zainspiruj się naszymi drukami! Każdy obraz może być nadrukowany u Ciebie!</p>
+      <p>
+        Zainspiruj się naszymi drukami! Każdy obraz może być nadrukowany u
+        Ciebie!
+      </p>
 
       <div className={styles.images}>
         {images.map((image) => {
           return (
-            <div key={image.id} className={styles.imgContainer}>
+            <div
+              key={image.id}
+              className={styles.imgContainer}
+              onClick={() => showFullScreen(image)}
+            >
               <img
                 alt={image.title}
-                src={image.image}
+                src={image.original}
                 className={styles.image}
               />
             </div>
           );
         })}
       </div>
-      {
-        nextCursor
-        ?
+      {nextCursor ? (
         <button onClick={hadleLoadMore}>Load more</button>
-        :
+      ) : (
         <p>There are all images we have 😃</p>
-      }
-      
+      )}
     </>
   );
 };

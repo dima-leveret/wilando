@@ -11,14 +11,32 @@ export async function search(options = {}) {
     const paramString = Object.keys(params)
         .map( key => `${key}=${encodeURIComponent(params[key])}`)
         .join('&')
-    const results = await fetch(
-        `https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_CLOUD_NAME}/resources/image?${paramString}`,
+
+    // const results = await fetch(
+    //     `https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_CLOUD_NAME}/resources/image?${paramString}`,
+    //     {
+    //       headers: {
+    //         Authorization: `Basic ${Buffer.from(
+    //           process.env.CLOUDINARY_API_KEY +
+    //             ":" +
+    //             process.env.CLOUDINARY_API_SECRET
+    //         ).toString("base64")}`,
+    //       },
+    //     }
+    //   ).then((r) => r.json());
+
+    //   return results;
+
+    //wilando 
+
+      const results = await fetch(
+        `https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_CLOUD_NAME_WILANDO}/resources/image?${paramString}`,
         {
           headers: {
             Authorization: `Basic ${Buffer.from(
-              process.env.CLOUDINARY_API_KEY +
+              process.env.CLOUDINARY_API_KEY_WILANDO +
                 ":" +
-                process.env.CLOUDINARY_API_SECRET
+                process.env.CLOUDINARY_API_SECRET_WILANDO
             ).toString("base64")}`,
           },
         }
@@ -32,7 +50,8 @@ export function mapImageResources(resources) {
         return {
           id: resource.asset_id,
           title: resource.public_id,
-          image: resource.secure_url,
+          original: resource.secure_url,
+          thumbnail: resource.secure_url,
           width: resource.width,
           height: resource.height,
         };

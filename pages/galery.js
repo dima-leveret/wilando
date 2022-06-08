@@ -4,11 +4,15 @@ import { search, mapImageResources } from "../src/lib/coudinary";
 
 import CloudinaryGalery from "../components/CloudinaryGalery";
 
+// import ImgGallery from "../components/ImgGallery";
+
 function Galery({ images, nextCursor }) {
 
   return (
     <>
       <HeadComponent title="Wilando | Galery" />
+
+      {/* <ImgGallery images={images} /> */}
 
       <CloudinaryGalery images={images} nextCursor={nextCursor} />
 
