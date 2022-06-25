@@ -15,13 +15,11 @@ const CloudinaryGalery = ({
   const [isFullScreen, setIsFullScreen] = useState(false);
 
   const imagesGalleryProps = useRef();
-  console.log("imagesGalleryProps ref =>", imagesGalleryProps.current);
 
   useEffect(() => {
     document.addEventListener("keyup", (e) => {
       if (e.key === "Escape") {
         cloSeFullScreen();
-        console.log("esc");
       }
     });
 
@@ -53,7 +51,6 @@ const CloudinaryGalery = ({
         nextCursor,
       }),
     }).then((r) => r.json());
-    console.log("results => ", results);
 
     const { resources, next_cursor: upadatedNextCursor } = results;
 
