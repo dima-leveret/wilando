@@ -1,5 +1,6 @@
 import EmailJsForm from "../components/EmailJsForm";
-import HeadComponent from "../components/HeadComponent"
+import HeadComponent from "../components/HeadComponent";
+import GoogleMapIframe from "../components/GoogleMapIframe";
 
 function Contact () {
     return (
@@ -8,6 +9,8 @@ function Contact () {
         <h2>Contact</h2>
 
         <EmailJsForm />
+
+        <GoogleMapIframe />
       </>
     );
 }
