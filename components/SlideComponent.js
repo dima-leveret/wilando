@@ -1,4 +1,4 @@
-import styles from "../styles/Slider.module.css"
+import styles from "../styles/Components/Slider.module.css"
 
 const SlideComponent = () => {
     return (

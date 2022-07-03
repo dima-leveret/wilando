@@ -1,13 +1,13 @@
 import SlideComponent from "./SlideComponent";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper";
+import { Autoplay, Pagination } from "swiper";
 
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import styles from "../styles/Slider.module.css";
+import styles from "../styles/Components/Slider.module.css";
 
 const Slider = () => {
   return (
@@ -23,8 +23,7 @@ const Slider = () => {
         pagination={{
           clickable: true,
         }}
-        navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
+        modules={[Autoplay, Pagination]}
         className="mySwiper"
       >
         <SwiperSlide>

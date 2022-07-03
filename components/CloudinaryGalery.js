@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { mapImageResources } from "../src/lib/coudinary";
-import styles from "../styles/Galery.module.css";
+import styles from "../styles/Components/Galery.module.css";
 
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";

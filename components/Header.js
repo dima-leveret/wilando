@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import styles from "../styles/Header.module.css";
+import styles from "../styles/Components/Header.module.css";
 import { useState } from "react";
 import * as GoIcons from "react-icons/go";
 
