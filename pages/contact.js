@@ -1,3 +1,4 @@
+import BasicInfo from "../components/BasicInfo";
 import EmailJsForm from "../components/EmailJsForm";
 import HeadComponent from "../components/HeadComponent";
 import GoogleMapIframe from "../components/GoogleMapIframe";
@@ -7,8 +8,7 @@ function Contact() {
   return (
     <>
       <HeadComponent title="Wilando | Contact" />
-
-      <h2>Kontakt</h2>
+      <BasicInfo />
       <div className={styles.mapContactContainer}>
         <GoogleMapIframe />
         <EmailJsForm />
