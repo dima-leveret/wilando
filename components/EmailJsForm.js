@@ -53,8 +53,6 @@ function EmailJsForm() {
 
   return (
     <>
-      {!status ? null : <p>Success! Thanks for your message!</p>}
-
       <div className={styles.formContainer}>
         <form className={styles.form} onSubmit={handleSubmit} ref={form}>
           <div className={styles.inputContainer}>
@@ -103,7 +101,10 @@ function EmailJsForm() {
             <FaIcons.FaPencilAlt className={styles.pencilIcon} />
           </div>
 
-          <input type="submit" value="Send" className={styles.btn} />
+          <div className={styles.btnContainer}>
+            <input type="submit" value="Send" className={styles.btn} />
+            {!status ? null : <FaIcons.FaCheck className={styles.checkIcon}/>}
+          </div>
         </form>
       </div>
     </>
