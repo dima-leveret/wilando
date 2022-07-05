@@ -102,7 +102,7 @@ function EmailJsForm() {
           </div>
 
           <div className={styles.btnContainer}>
-            <input type="submit" value="Send" className={styles.btn} />
+            <input type="submit" value="Wyślij" className={styles.btn} />
             {!status ? null : <FaIcons.FaCheck className={styles.checkIcon}/>}
           </div>
         </form>
