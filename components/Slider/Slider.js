@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import styles from "../styles/Components/Slider.module.css";
+import styles from "../../styles/Components/Slider.module.css";
 
 const Slider = () => {
   return (
@@ -17,25 +17,25 @@ const Slider = () => {
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 2500,
+          delay: 3000,
           disableOnInteraction: false,
         }}
         pagination={{
           clickable: true,
         }}
         modules={[Autoplay, Pagination]}
-        className="mySwiper"
+        // className={styles.swiper}
       >
-        <SwiperSlide>
+        <SwiperSlide className={styles.swiper}>
           <SlideComponent />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className={styles.swiper}>
           <SlideComponent />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className={styles.swiper}>
           <SlideComponent />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className={styles.swiper}>
           <SlideComponent />
         </SwiperSlide>
       </Swiper>

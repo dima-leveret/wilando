@@ -1,5 +1,5 @@
 import HeadComponent from "../components/HeadComponent";
-import Slider from "../components/Slider";
+import Slider from "../components/Slider/Slider";
 
 export default function Home() {
   return (
