@@ -19,6 +19,7 @@
     width: 100%;
 
     border: 1px dashed;
+    transition: 0.5s;
     
 }
 

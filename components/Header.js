@@ -23,50 +23,55 @@ function Header() {
 
   return (
     <header className={styles.header}>
-      <Link href="/">
-        <a className={styles.logo}>
-          <Image
-            src="/logo-willando-small-size2.png"
-            width={300}
-            height={150}
-            onClick={closeBurgerMenu}
-          />
-        </a>
-      </Link>
-      <div
-        className={burgerMenu ? styles.navBarActive : styles.navBar}
-        onClick={closeBurgerMenu}
-      >
-        <nav className={styles.nav}>
-          <Link href="/">
-            <a>Główna</a>
-          </Link>
-          <Link href="/galery">
-            <a>Galeria</a>
-          </Link>
-          <Link href="/for-whom">
-            <a>Dla kogo</a>
-          </Link>
-          <Link href="/price-list">
-            <a>Cennik</a>
-          </Link>
-          <Link href="/about-us">
-            <a>O nas</a>
-          </Link>
-          <Link href="/contact">
-            <a>Kontakt</a>
-          </Link>
-        </nav>
-      </div>
-      <div>
-        {burgerMenu ? (
-          <GoIcons.GoX className={styles.burgerIcon} onClick={showBugerMenu} />
-        ) : (
-          <GoIcons.GoThreeBars
-            className={styles.burgerIcon}
-            onClick={showBugerMenu}
-          />
-        )}
+      <div className={styles.headerContainer}>
+        <Link href="/">
+          <a className={styles.logo}>
+            <Image
+              src="/logo-willando-small-size2.png"
+              width={300}
+              height={150}
+              onClick={closeBurgerMenu}
+            />
+          </a>
+        </Link>
+        <div
+          className={burgerMenu ? styles.navBarActive : styles.navBar}
+          onClick={closeBurgerMenu}
+        >
+          <nav className={styles.nav}>
+            <Link href="/">
+              <a>Główna</a>
+            </Link>
+            <Link href="/galery">
+              <a>Galeria</a>
+            </Link>
+            <Link href="/for-whom">
+              <a>Dla kogo</a>
+            </Link>
+            <Link href="/price-list">
+              <a>Cennik</a>
+            </Link>
+            <Link href="/about-us">
+              <a>O nas</a>
+            </Link>
+            <Link href="/contact">
+              <a>Kontakt</a>
+            </Link>
+          </nav>
+        </div>
+        <div>
+          {burgerMenu ? (
+            <GoIcons.GoX
+              className={styles.burgerIcon}
+              onClick={showBugerMenu}
+            />
+          ) : (
+            <GoIcons.GoThreeBars
+              className={styles.burgerIcon}
+              onClick={showBugerMenu}
+            />
+          )}
+        </div>
       </div>
     </header>
   );
