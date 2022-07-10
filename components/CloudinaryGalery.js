@@ -76,7 +76,7 @@ const CloudinaryGalery = ({
         />
       </div>
 
-      <h2>Galery</h2>
+      <h2>Galeria</h2>
       <p>
         Zainspiruj się naszymi drukami! Każdy obraz może być nadrukowany u
         Ciebie!
