@@ -25,6 +25,20 @@
   border-bottom: 1px solid #343d48;
   padding: 10px 0;
   position: relative;
+  top: 0;
+  transition: 0.5s ease-in-out;
+  height: 100%;
+}
+
+.topLineHidden {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid #343d48;
+  position: relative;
+  top: -100%;
+  transition: 0.5s ease-in-out;
+  height: 0px;
 }
 
 .phoneNrContainer {
