@@ -1,22 +1,8 @@
 import styles from "../../styles/Components/Header.module.css";
 import { SocialLinks } from "../SocialLinks";
 import { ImPhone } from "react-icons/im";
-import { useState, useEffect } from "react";
 
-export const TopLine = () => {
-  const [displayTopLine, setDisplayTopLine] = useState(true);
-
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.pageYOffset > 0) {
-        setDisplayTopLine(false);
-      }
-      if (window.pageYOffset === 0) {
-        setDisplayTopLine(true);
-      }
-    });
-  }, []);
-
+export const TopLine = ({ displayTopLine }) => {
   return (
     <div className={displayTopLine ? styles.topLine : styles.topLineHidden}>
       <span className={styles.phoneNrContainer}>

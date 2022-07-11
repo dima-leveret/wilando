@@ -8,6 +8,12 @@
   z-index: 2;
   background-color: #141d28;
   opacity: 0.9;
+  transition: 0.5s ease-in-out;
+}
+
+.headerOpacity {
+  opacity: 0.99;
+  transition: 0.5s ease-in-out;
 }
 
 .headerContainer {
@@ -90,7 +96,7 @@
 
 .instagramIcon:hover {
   transition: 0.2s;
-  color: #DD2A7B;
+  color: #dd2a7b;
 }
 
 .menu {
