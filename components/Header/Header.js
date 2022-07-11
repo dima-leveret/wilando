@@ -22,7 +22,7 @@ function Header() {
       className={
         displayTopLine
           ? styles.header
-          : `${styles.header} ${styles.headerOpacity}`
+          : `${styles.header} ${styles.headerNarrow}`
       }
     >
       <div className={styles.headerContainer}>

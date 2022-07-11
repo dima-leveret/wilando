@@ -8,12 +8,14 @@
   z-index: 2;
   background-color: #141d28;
   opacity: 0.9;
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
-.headerOpacity {
+.headerNarrow {
   opacity: 0.99;
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease-in-out;
+  position: fixed;
+  top: -50px;
 }
 
 .headerContainer {
@@ -30,21 +32,6 @@
   width: 100%;
   border-bottom: 1px solid #343d48;
   padding: 10px 0;
-  position: relative;
-  top: 0;
-  transition: 0.5s ease-in-out;
-  height: 100%;
-}
-
-.topLineHidden {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  border-bottom: 1px solid #343d48;
-  position: relative;
-  top: -100%;
-  transition: 0.5s ease-in-out;
-  height: 0px;
 }
 
 .phoneNrContainer {
@@ -104,14 +91,15 @@
   width: 100%;
   justify-content: space-around;
   align-items: center;
+  padding: 10px 0;
 }
 
 .logo {
   cursor: pointer;
   max-width: 200px;
   width: 100%;
-  padding: 0;
-  margin: 0;
+  display: flex;
+  align-items: center;
 }
 
 .navBar,
