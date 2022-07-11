@@ -6,8 +6,8 @@
   position: fixed;
   top: 0;
   z-index: 2;
-  background-color: #141d28;
-  opacity: 0.9;
+  background-color: #2B333D;
+  /* opacity: 0.9; */
   transition: 0.3s ease-in-out;
 }
 
@@ -16,6 +16,7 @@
   transition: 0.3s ease-in-out;
   position: fixed;
   top: -50px;
+  background-color: #141d28;
 }
 
 .headerContainer {
