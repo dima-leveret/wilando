@@ -31,13 +31,14 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  border-bottom: 1px solid #343d48;
+  border-bottom: 1px solid #4f5b6b;
   padding: 10px 0;
 }
 
 .phoneNrContainer {
   display: flex;
   align-items: center;
+  padding-left: 10px;
 }
 
 .phoneIcon {
