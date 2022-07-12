@@ -7,7 +7,7 @@ export const SocialLinks = () => {
       <a href="https://www.facebook.com/Wilando.print" target="blank">
         <FaFacebookF className={styles.facebookIcon} />
       </a>
-      <a href="#">
+      <a href="#" target="blank">
         <FaInstagram className={styles.instagramIcon} />
       </a>
     </div>

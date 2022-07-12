@@ -5,7 +5,7 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import disableScroll from "disable-scroll";
 import { useState } from "react";
 
-export const Menu = () => {
+export const Menu = ({ displayTopLine }) => {
   const [burgerMenu, setBurgerMenu] = useState(false);
 
   const showBugerMenu = () => {

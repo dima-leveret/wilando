@@ -27,7 +27,7 @@ function Header() {
     >
       <div className={styles.headerContainer}>
         <TopLine displayTopLine={displayTopLine} />
-        <Menu />
+        <Menu displayTopLine={displayTopLine} />
       </div>
     </header>
   );
