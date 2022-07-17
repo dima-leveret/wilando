@@ -9,9 +9,11 @@ function Contact() {
     <>
       <HeadComponent title="Wilando | Contact" />
       <BasicInfo />
-      <div className={styles.mapContactContainer}>
-        <GoogleMapIframe />
-        <EmailJsForm />
+      <div className={styles.mapContact}>
+        <div className={styles.mapContactContainer}>
+          <GoogleMapIframe />
+          <EmailJsForm />
+        </div>
       </div>
     </>
   );
