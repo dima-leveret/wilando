@@ -38,7 +38,6 @@
 .phoneNrContainer {
   display: flex;
   align-items: center;
-  padding-left: 10px;
 }
 
 .phoneIcon {
@@ -56,36 +55,6 @@
 .phoneNr:hover {
   color: #0ac775;
   transition: 0.2s;
-}
-
-.socialLinks {
-  display: flex;
-  justify-content: space-between;
-  color: #fff;
-}
-
-.socialLinks a {
-  display: flex;
-  align-items: center;
-  padding: 0 10px;
-}
-
-.facebookIcon {
-  transition: 0.2s;
-}
-
-.facebookIcon:hover {
-  transition: 0.2s;
-  color: #3b5998;
-}
-
-.instagramIcon {
-  transition: 0.2s;
-}
-
-.instagramIcon:hover {
-  transition: 0.2s;
-  color: #dd2a7b;
 }
 
 .menu {

@@ -1,4 +1,5 @@
-import styles from "../styles/Components/Header.module.css";
+// import styles from "../styles/Components/Header.module.css";
+import styles from "../styles/Components/SocialLinks.module.css";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 
 export const SocialLinks = () => {
