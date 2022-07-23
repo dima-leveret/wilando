@@ -91,7 +91,7 @@
   line-height: 1;
   padding: 15px 35px;
   color: #141d28;
-  border-color: #141d28;
+  border: 1px solid #141d28;
   width: 150px;
   transition: 0.2s ease-in-out;
 }
