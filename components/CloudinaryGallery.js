@@ -102,7 +102,7 @@ const CloudinaryGalery = ({
       </div>
       {nextCursor ? (
         <button className={styles.loadMoreBtn} onClick={hadleLoadMore}>
-          Load more
+          Pokaż więcej
         </button>
       ) : (
         <p>To są wszystkie zdjęcia które obecnie mamy 😃</p>
