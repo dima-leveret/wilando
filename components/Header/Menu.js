@@ -38,7 +38,7 @@ export const Menu = ({ displayTopLine }) => {
           <Link href="/">
             <a>Główna</a>
           </Link>
-          <Link href="/galery">
+          <Link href="/gallery">
             <a>Galeria</a>
           </Link>
           <Link href="/for-whom">

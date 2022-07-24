@@ -1,24 +1,36 @@
+.galleryTitle {
+  margin-bottom: 0.35em;
+  font-size: 60px;
+  /* word-wrap: break-word; */
+  line-height: 1.25;
+  font-weight: 700;
+  color: #0ac775;
+}
+
+.galleryText {
+  font-size: 20px;
+  font-weight: 300;
+}
+
 .images {
+  max-width: 1600px;
   width: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 12px;
-
+  gap: 30px;
   padding: 20px;
-
 }
 
 .imgContainer {
   display: flex;
   align-items: center;
   cursor: pointer;
-
-  max-width: 300px;
+  max-width: 500px;
   width: 100%;
-
-  border: 1px dashed;
   transition: 0.5s;
+  box-shadow: 5px 5px 10px 5px #748da8;
+  border-radius: 10px;
 }
 
 .imgContainer:hover {
@@ -53,7 +65,7 @@
 }
 
 .loadMoreBtn:hover {
-    cursor: pointer;
-    box-shadow: 5px 5px 10px #5c6f87;
-    transition: 0.2s ease-in-out;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px #5c6f87;
+  transition: 0.2s ease-in-out;
 }

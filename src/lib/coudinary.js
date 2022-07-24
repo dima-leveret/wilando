@@ -30,7 +30,7 @@ export async function search(options = {}) {
     //wilando 
 
       const results = await fetch(
-        `https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_CLOUD_NAME_WILANDO}/resources/image?${paramString}`,
+        `https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_CLOUD_NAME_WILANDO}/resources/search?${paramString}`,
         {
           headers: {
             Authorization: `Basic ${Buffer.from(

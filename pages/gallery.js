@@ -2,7 +2,7 @@ import HeadComponent from "../components/HeadComponent";
 
 import { search, mapImageResources } from "../src/lib/coudinary";
 
-import CloudinaryGalery from "../components/CloudinaryGalery";
+import CloudinaryGalery from "../components/CloudinaryGallery";
 
 function Galery({ images, nextCursor }) {
   return (
@@ -17,7 +17,9 @@ function Galery({ images, nextCursor }) {
 export default Galery;
 
 export const getStaticProps = async () => {
-  const results = await search();
+  const results = await search({
+    max_results: 9,
+  });
 
   const { resources, next_cursor: nextCursor } = results;
 
@@ -26,7 +28,7 @@ export const getStaticProps = async () => {
   return {
     props: {
       images,
-      nextCursor,
+      nextCursor: nextCursor || null,
     },
   };
 };

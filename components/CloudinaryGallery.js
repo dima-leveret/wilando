@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { mapImageResources } from "../src/lib/coudinary";
-import styles from "../styles/Components/Galery.module.css";
+import styles from "../styles/Components/Gallery.module.css";
 
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
@@ -49,6 +49,7 @@ const CloudinaryGalery = ({
       method: "POST",
       body: JSON.stringify({
         nextCursor,
+        max_results: 9,
       }),
     }).then((r) => r.json());
 
@@ -76,8 +77,8 @@ const CloudinaryGalery = ({
         />
       </div>
 
-      <h2>Galeria</h2>
-      <p>
+      <span className={styles.galleryTitle}>Galeria</span>
+      <p className={styles.galleryText}>
         Zainspiruj się naszymi drukami! Każdy obraz może być nadrukowany u
         Ciebie!
       </p>
@@ -100,9 +101,11 @@ const CloudinaryGalery = ({
         })}
       </div>
       {nextCursor ? (
-        <button className={styles.loadMoreBtn} onClick={hadleLoadMore}>Load more</button>
+        <button className={styles.loadMoreBtn} onClick={hadleLoadMore}>
+          Load more
+        </button>
       ) : (
-        <p>There are all images we have 😃</p>
+        <p>To są wszystkie zdjęcia które obecnie mamy 😃</p>
       )}
     </>
   );
