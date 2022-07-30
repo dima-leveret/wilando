@@ -1,7 +1,6 @@
 .galleryTitle {
   margin-bottom: 0.35em;
   font-size: 60px;
-  /* word-wrap: break-word; */
   line-height: 1.25;
   font-weight: 700;
   color: #0ac775;
@@ -26,11 +25,10 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  max-width: 500px;
+  max-width: 450px;
   width: 100%;
   transition: 0.5s;
   box-shadow: 5px 5px 10px 5px #748da8;
-  border-radius: 10px;
 }
 
 .imgContainer:hover {
@@ -40,7 +38,6 @@
 
 .image {
   width: 100%;
-  border-radius: 10px;
 }
 
 .galleryActive {
