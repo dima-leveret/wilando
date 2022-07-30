@@ -112,6 +112,10 @@
     justify-content: space-between;
   }
 
+  .logo {
+    max-width: 100px;
+  }
+
   .navBar {
     right: -100%;
     transition: 0.5s;
@@ -156,7 +160,7 @@
 
   .burgerIcon {
     display: block;
-    font-size: 50px;
+    font-size: 30px;
     color: #fff;
     z-index: 10;
   }
