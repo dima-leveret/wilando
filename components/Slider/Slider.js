@@ -27,16 +27,16 @@ const Slider = () => {
         // className={styles.swiper}
       >
         <SwiperSlide className={styles.swiper}>
-          <SlideComponent />
+          <SlideComponent sourceImg="/wallprint-DEKORACJA.jpg" />
         </SwiperSlide>
         <SwiperSlide className={styles.swiper}>
-          <SlideComponent />
+          <SlideComponent sourceImg="/wallprint-PLOTNO.jpg" />
         </SwiperSlide>
         <SwiperSlide className={styles.swiper}>
-          <SlideComponent />
+          <SlideComponent sourceImg="/wallprint-PLOTNOsample-1.jpg" />
         </SwiperSlide>
         <SwiperSlide className={styles.swiper}>
-          <SlideComponent />
+          <SlideComponent sourceImg="/wallprint-PLOTNOsample.jpg" />
         </SwiperSlide>
       </Swiper>
     </div>

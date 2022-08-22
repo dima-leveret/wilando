@@ -1,10 +1,10 @@
 import styles from "../../styles/Components/Slider.module.css";
 
-const SlideComponent = () => {
+const SlideComponent = ({ sourceImg }) => {
   return (
     <div className={styles.slide}>
       <div className={styles.imgContainer}>
-        <img src="/logo-wilando2.jpg" alt="logo" />
+        <img src={sourceImg} alt="logo" />
       </div>
     </div>
   );
