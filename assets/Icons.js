@@ -1,4 +1,4 @@
-export const LogoIcon = () => (
+export const LogoIconBlack = () => (
   <svg
     version="1.1"
     id="svg2"
