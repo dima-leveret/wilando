@@ -6,7 +6,7 @@ import { useState } from "react";
 
 import { LogoIconBlack } from "../../assets/Icons";
 
-export const Menu = ({ displayTopLine }) => {
+export const Menu = () => {
   const [burgerMenu, setBurgerMenu] = useState(false);
 
   const showBugerMenu = () => {
