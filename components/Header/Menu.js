@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import styles from "../../styles/Components/Header.module.css";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import disableScroll from "disable-scroll";
@@ -23,14 +22,8 @@ export const Menu = ({ displayTopLine }) => {
   return (
     <div className={styles.menu}>
       <Link href="/">
-        <a className={styles.logo}>
+        <a onClick={closeBurgerMenu} className={styles.logo}>
           <LogoIconBlack />
-          {/* <Image
-            src="/logo-willando-small-size2.png"
-            width={300}
-            height={150}
-            onClick={closeBurgerMenu}
-          /> */}
         </a>
       </Link>
       <div
