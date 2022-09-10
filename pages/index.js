@@ -9,10 +9,10 @@ export default function Home() {
 
       <Slider />
 
-      <div className={styles.homeText} >
+      <div className={styles.homeText}>
         <div className={styles.homeTextContainer}>
           <h4 className={styles.heading}>
-            Witamy w świece unikalnych technologij dekoru!
+            <mark className={styles.mark} >Witamy</mark> w świece unikalnych technologij dekoru!
           </h4>
           <p className={styles.text}>
             Chcesz dodać w swoje życie barw czy inspiracji? Wyróżnić swoje

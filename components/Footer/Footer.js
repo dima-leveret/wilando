@@ -22,7 +22,7 @@ function Footer() {
 
           <div className={styles.contactUsItem}>
             <MdLocationOn className={styles.contactUsIcon} />
-            <div className={styles.contsctUsText}>
+            <div className={styles.contactUsText}>
               <span>Adres:</span>
               <p>Kopanina 54/56, 60-105, Poznań</p>
             </div>
@@ -30,17 +30,19 @@ function Footer() {
 
           <div className={styles.contactUsItem}>
             <MdPhone className={styles.contactUsIcon} />
-            <div className={styles.contsctUsText}>
+            <div className={styles.contactUsText}>
               <span>Telefon:</span>
-              <p>+48 123 123 123</p>
+              <a href="tel:+48 123 123 123" className={styles.phoneNr}>
+                +48 123 123 123
+              </a>
             </div>
           </div>
 
           <div className={styles.contactUsItem}>
             <MdEmail className={styles.contactUsIcon} />
-            <div className={styles.contsctUsText}>
+            <div className={styles.contactUsText}>
               <span>Mail:</span>
-              <p>wilando@gmail.com</p>
+              <a href="mailto:wilando@gmail.com">wilando@gmail.com</a>
             </div>
           </div>
         </div>

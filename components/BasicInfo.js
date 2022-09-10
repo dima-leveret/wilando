@@ -12,7 +12,9 @@ const BasicInfo = () => {
           <div className={styles.infoText}>
             <span>Telefon</span>
             <p>skontaktuj się z nami przez telefon</p>
-            <p>+48 123 123 123</p>
+            <a className={styles.phoneNr} href="tel:123456789">
+              123 456 789
+            </a>
           </div>
         </div>
 
@@ -29,7 +31,7 @@ const BasicInfo = () => {
           <BsEnvelope className={styles.infoItemIcon} />
           <div className={styles.infoText}>
             <span>Email</span>
-            <p>wilando@gmail.com</p>
+            <a href="mailto: wilando@gmail.com" className={styles.mail} >wilando@gmail.com</a>
           </div>
         </div>
 

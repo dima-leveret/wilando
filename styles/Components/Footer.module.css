@@ -17,9 +17,9 @@
 }
 
 .about {
-    max-width: 370px;
-    width: 100%;
-    padding: 30px;
+  max-width: 370px;
+  width: 100%;
+  padding: 30px;
 }
 
 .title {
@@ -41,25 +41,37 @@
 }
 
 .contactUs {
-   padding: 30px;
+  padding: 30px;
 }
 
 .contactUsItem {
-    display: flex;
-    padding: 5px 0;
+  display: flex;
+  padding: 5px 0;
 }
 
 .contactUsIcon {
-    color: #0ac775;
-    width: 18px;
-    height: 18px;
-    margin: 2px 5px 0 0;
+  color: #0ac775;
+  width: 18px;
+  height: 18px;
+  margin: 2px 5px 0 0;
 }
 
-.contsctUsText span {
-    font-weight: 500;
+.contactUsText {
+  display: flex;
+  flex-direction: column;
 }
 
-.contsctUsText p {
-    margin: 10px 0;
+.contactUsText span {
+  font-weight: 500;
+}
+
+.contactUsText a {
+  margin: 10px 0;
+  transition: 0.2s;
+}
+
+.contactUsText a:hover {
+  margin: 10px 0;
+  color: #0ac775;
+  transition: 0.2s;
 }

@@ -53,14 +53,26 @@
   color: #141d28;
 }
 
+.phoneNr,
+.mail {
+  transition: 0.2s;
+  color: #5c6f87;
+}
+
+.phoneNr:hover,
+.mail:hover {
+  color: #0ac775;
+  transition: 0.2s;
+}
+
 @media only screen and (max-width: 1000px) {
- .basicInfo {
-  grid-template-columns: 1fr 1fr;
- }
+  .basicInfo {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media only screen and (max-width: 500px) {
   .basicInfo {
     grid-template-columns: 1fr;
-   }
+  }
 }
