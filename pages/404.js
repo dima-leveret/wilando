@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 
-import styles from '../styles/NotFound.module.css';
+import styles from '../styles/Components/NotFound.module.css';
 
 const NotFound = () => {
   const router = useRouter();

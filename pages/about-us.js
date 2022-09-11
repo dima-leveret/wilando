@@ -1,4 +1,4 @@
-import style from "../styles/About.module.css"
+import style from "../styles/Components/About.module.css"
 import HeadComponent from "../components/HeadComponent"
 
 function AboutUs () {

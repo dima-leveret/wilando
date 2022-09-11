@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
-import styles from "../styles/EmailJsForm.module.css";
+import styles from "../styles/Components/EmailJsForm.module.css";
 import emailjs from "emailjs-com";
+import * as FaIcons from "react-icons/fa";
 
 function EmailJsForm() {
   const form = useRef();
@@ -26,7 +27,6 @@ function EmailJsForm() {
         (error) => {
           console.log(error.text);
         }
-
       );
 
     //wilando send form data
@@ -53,31 +53,60 @@ function EmailJsForm() {
 
   return (
     <>
-      <h3>Wyslij nam wiadomość</h3>
+      <div className={styles.formContainer}>
+        <form className={styles.form} onSubmit={handleSubmit} ref={form}>
+          <div className={styles.inputContainer}>
+            <input
+              id="name"
+              type="text"
+              required
+              name="name"
+              placeholder="Name"
+              className={styles.input}
+            />
+            <FaIcons.FaUser />
+          </div>
 
-      {
-        !status
-        ?
-        null
-        :
-        <p>Success! Thanks for your message!</p>
-      }
+          <div className={styles.inputContainer}>
+            <input
+              id="email"
+              type="email"
+              required
+              name="email"
+              placeholder="Email"
+              className={styles.input}
+            />
+            <FaIcons.FaEnvelope />
+          </div>
 
-      <form className={styles.form} onSubmit={handleSubmit} ref={form}>
-        <label htmlFor="name">Name</label>
-        <input id="name" type="text" required name="name" />
+          <div className={styles.inputContainer}>
+            <input
+              id="phone"
+              type="tel"
+              name="phone"
+              placeholder="Phone"
+              className={styles.input}
+            />
+            <FaIcons.FaPhoneAlt />
+          </div>
 
-        <label htmlFor="email">Email</label>
-        <input id="email" type="email" required name="email" />
+          <div className={styles.textareaContainer}>
+            <textarea
+              id="message"
+              type="text"
+              name="message"
+              placeholder="Message"
+              className={styles.textarea}
+            />
+            <FaIcons.FaPencilAlt className={styles.pencilIcon} />
+          </div>
 
-        <label htmlFor="phone">Phone number</label>
-        <input id="phone" type="tel" name="phone" />
-
-        <label htmlFor="message">Message</label>
-        <textarea id="message" type="text" rows="4" name="message" />
-
-        <input type="submit" value="Send" />
-      </form>
+          <div className={styles.btnContainer}>
+            <input type="submit" value="Wyślij" className={styles.btn} />
+            {!status ? null : <FaIcons.FaCheck className={styles.checkIcon}/>}
+          </div>
+        </form>
+      </div>
     </>
   );
 }

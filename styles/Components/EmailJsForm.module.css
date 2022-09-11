@@ -1,0 +1,110 @@
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+  padding: 0 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 450px;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+  padding: 5px;
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(20, 29, 40, 0.1);
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+}
+
+.input {
+  background-color: unset;
+  height: 50px;
+  border: 0;
+  font-weight: 400;
+  color: #5c6f87;
+  padding: 10px 30px 10px 0;
+  font-size: 16px;
+  line-height: 24px;
+  width: 100%;
+  outline: none;
+}
+
+.textarea {
+  background-color: unset;
+  height: 50px;
+  border: 1px solid rgba(20, 29, 40, 0.1);
+  border-radius: 0;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  font-weight: 400;
+  color: #5c6f87;
+  padding: 10px 30px 10px 0;
+  font-size: 16px;
+  line-height: 24px;
+  width: 100%;
+  outline: none;
+
+  height: auto;
+  min-height: 146px;
+  background-image: linear-gradient(
+    transparent,
+    transparent 46px,
+    rgba(20, 29, 40, 0.1) 30px,
+    rgba(20, 29, 40, 0.1) 47px,
+    transparent 31px
+  ) !important;
+  background-size: 100% 50px;
+  line-height: 50px;
+}
+
+.textareaContainer {
+  display: flex;
+  position: relative;
+}
+
+.pencilIcon {
+  margin-top: 15px;
+  position: absolute;
+  right: 0;
+}
+
+.btnContainer {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  background-color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  padding: 15px 35px;
+  color: #141d28;
+  border: 1px solid #141d28;
+  width: 150px;
+  transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+  cursor: pointer;
+  box-shadow: 5px 5px 10px #5c6f87;
+  transition: 0.2s ease-in-out;
+}
+
+.checkIcon {
+  width: 30px;
+  height: auto;
+  margin-left: 30px;
+  color: #0ac775;
+}

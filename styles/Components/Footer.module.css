@@ -1,0 +1,77 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #141d28;
+  color: #fff;
+}
+
+.footerContainer {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+  width: 100%;
+  justify-content: space-between;
+  padding: 100px 0;
+}
+
+.about {
+  max-width: 370px;
+  width: 100%;
+  padding: 30px;
+}
+
+.title {
+  letter-spacing: 4.8px;
+  text-indent: 4.8px;
+  font-size: 12px;
+  line-height: 0.9;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 50px;
+  color: #0ac775;
+}
+
+.aboutText {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 50px;
+}
+
+.contactUs {
+  padding: 30px;
+}
+
+.contactUsItem {
+  display: flex;
+  padding: 5px 0;
+}
+
+.contactUsIcon {
+  color: #0ac775;
+  width: 18px;
+  height: 18px;
+  margin: 2px 5px 0 0;
+}
+
+.contactUsText {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactUsText span {
+  font-weight: 500;
+}
+
+.contactUsText a {
+  margin: 10px 0;
+  transition: 0.2s;
+}
+
+.contactUsText a:hover {
+  margin: 10px 0;
+  color: #0ac775;
+  transition: 0.2s;
+}

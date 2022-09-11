@@ -1,0 +1,27 @@
+.slider {
+  display: flex;
+  width: 100%;
+}
+
+.slide {
+  max-width: 1600px;
+  width: 100%;
+  display: flex;
+  align-self: center;
+}
+
+.imgContainer {
+  width: 100%;
+  display: flex;
+  align-self: center;
+}
+
+.imgContainer img {
+  width: 100%;
+}
+
+.swiper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

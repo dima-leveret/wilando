@@ -1,0 +1,31 @@
+.socialLinks {
+    max-width: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    margin-right: 10px;
+  }
+  
+  .socialLinks a {
+    display: flex;
+    align-items: center;
+  }
+  
+  .facebookIcon {
+    transition: 0.2s;
+  }
+  
+  .facebookIcon:hover {
+    transition: 0.2s;
+    color: #3b5998;
+  }
+  
+  .instagramIcon {
+    transition: 0.2s;
+  }
+  
+  .instagramIcon:hover {
+    transition: 0.2s;
+    color: #dd2a7b;
+  }

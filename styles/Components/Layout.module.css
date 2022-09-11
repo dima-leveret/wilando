@@ -1,0 +1,33 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* .layoutContainer {
+    max-width: 1600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  margin-top: 250px;
+  flex: 1 1 auto;
+
+  /* border: 1px solid black; */
+  /* border-radius: 15px; */
+}
+
+@media only screen and (max-width: 800px) {
+  .content {
+    margin-top: 130px;
+  }
+}
