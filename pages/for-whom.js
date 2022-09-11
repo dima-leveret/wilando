@@ -1,14 +1,14 @@
-import HeadComponent from "../components/HeadComponent"
+import HeadComponent from "../components/HeadComponent";
+import PageTitle from "../components/PageTitle";
 
-function ForWhom () {
+function ForWhom() {
+  return (
+    <>
+      <HeadComponent title="Wilando | Fro whom" />
 
-    return (
-      <>
-        <HeadComponent title="Wilando | Fro whom" />
-
-        <h2>Dla kogo</h2>
-      </>
-    );
+      <PageTitle title="Dla kogo" />
+    </>
+  );
 }
 
 export default ForWhom;

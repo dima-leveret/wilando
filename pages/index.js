@@ -1,4 +1,5 @@
 import HeadComponent from "../components/HeadComponent";
+import PageTitle from "../components/PageTitle";
 import Slider from "../components/Slider/Slider";
 import styles from "../styles/pages/Home.module.css";
 
@@ -6,6 +7,8 @@ export default function Home() {
   return (
     <>
       <HeadComponent title="Wilando" />
+
+      <PageTitle title="Główna" />
 
       <Slider />
 

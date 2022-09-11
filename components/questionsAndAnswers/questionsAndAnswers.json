@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "question": "Rozmiary druku?",
+        "answer": "Maksymalna wysokość druku wynosi 259 cm. Szerokość druku prawie bez ograniczeń. Odległość od ścian po lewej stronie wynosi 10 cm oraz po prawej stronie to 40 cm. Odstęp od podłogi wynosi 40 cm oraz 28 cm od sufitu."
+    },
+    {
+        "id": 2,
+        "question": "Czy potrzebne specjalne przygotowania przed drukiem?",
+        "answer": "Nie. Jesteśmy w stanie drukować prawie na każdej powierzchni a wiec nie ma potrzeby przygotowywać ścianę przed drukiem."
+    },
+    {
+        "id": 3,
+        "question": "Jaką trwałość ma wydrukowany obrazek?",
+        "answer": "Na każdy druk dajemy gwarancje trwałości 10 lat wewnątrz pomieszczeń. Gwarancja nie dotyczy uszkodzeń mechanicznych."
+    },
+    {
+        "id": 4,
+        "question": "Jaką grafikę mogę wybrać?",
+        "answer": "Prawie każdą. Jesteś my w stanie nadrukować dowolną grafikę. Pod warunkiem że wybrana grafika będzie w miarę dobrej jakości. Dla sprawdzenia grafiki prosimy o wysłanie pliku na adres meilowy wialndo.art@gmail.com. Nasi pracownicy sprawdzą i doradzą odnośnie wybranej grafi."
+    },
+    {
+        "id": 5,
+        "question": "Ile trwa druk na miejscu?",
+        "answer": "Szybkość druku to 45 minut na 1 m2 + około godziny przygotowanie sprzętu (ze wniesieniem)."
+    },
+    {
+        "id": 6,
+        "question": "Jaką farbą drukowane?",
+        "answer": "Dla druku wykorzystujemy specjalne UV-atramenty które są ekologiczne, nietoksyczne oraz bezwonne po utwardzaniu. Bezpieczne dla ludzi oraz zwierząt."
+    }
+]

@@ -1,0 +1,21 @@
+.facebookLink {
+  font-weight: 600;
+  transition: 0.2s;
+  color: #0ac775;
+}
+
+.facebookLink:hover {
+  transition: 0.2s;
+  color: #3b5998;
+}
+
+.instagramLink {
+  font-weight: 600;
+  transition: 0.2s;
+  color: #0ac775;
+}
+
+.instagramLink:hover {
+  transition: 0.2s;
+  color: #dd2a7b;
+}
