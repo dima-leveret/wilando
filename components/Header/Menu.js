@@ -40,6 +40,9 @@ export const Menu = () => {
           <Link href="/for-whom">
             <a>Dla kogo</a>
           </Link>
+          <Link href="/frequently-asked-questions">
+            <a>FAQ</a>
+          </Link>
           <Link href="/price-list">
             <a>Cennik</a>
           </Link>
