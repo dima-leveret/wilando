@@ -3,11 +3,13 @@ import questionsAndAnswers from "./questionsAndAnswers.json";
 import { useState } from "react";
 
 const QuestionsAndAnswersList = () => {
-  const [items, setItems] = useState([]);
+  const [selectedId, setSelectedId] = useState(null);
 
   const handleOnItemClick = (itemId) => {
-    items.push(itemId);
-    console.log(items);
+    if (selectedId === itemId) {
+      return setSelectedId(null);
+    }
+    setSelectedId(itemId);
   };
 
   return (
@@ -18,6 +20,8 @@ const QuestionsAndAnswersList = () => {
           question={data.question}
           answer={data.answer}
           onClick={() => handleOnItemClick(data.id)}
+          selectedId={selectedId}
+          itemId={data.id}
         />
       ))}
     </div>
