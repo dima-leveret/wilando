@@ -9,12 +9,25 @@ const QuestionsAndAnswersItem = ({
   onClick,
 }) => {
   return (
-    <div onClick={onClick} className={styles.item}>
-      <div className={styles.titleContainer}>
+    <div className={styles.item}>
+      <div onClick={onClick} className={styles.titleContainer}>
         <span className={styles.questionTitle}> {question} </span>
-        <BsPlusLg className={ selectedId === itemId ? styles.plusIconRotated: styles.plusIcon} />
+        <div className={styles.plusIconContainer} >
+          <BsPlusLg
+            className={
+              selectedId === itemId ? styles.plusIconRotated : styles.plusIcon
+            }
+          />
+        </div>
       </div>
-      <span> {answer} </span>
+      <span
+        className={
+          selectedId === itemId ? styles.answerOpened : styles.answerClosed
+        }
+      >
+        {" "}
+        {answer}{" "}
+      </span>
     </div>
   );
 };

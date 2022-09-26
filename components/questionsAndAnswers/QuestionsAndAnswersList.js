@@ -1,4 +1,5 @@
 import QuestionsAndAnswersItem from "./QuestionsAndAnswersItem";
+import styles from "../../styles/Components/QuestionsAndAnswersList.module.css";
 import questionsAndAnswers from "./questionsAndAnswers.json";
 import { useState } from "react";
 
@@ -13,7 +14,7 @@ const QuestionsAndAnswersList = () => {
   };
 
   return (
-    <div>
+    <div className={styles.listConatiner}>
       {questionsAndAnswers.map((data) => (
         <QuestionsAndAnswersItem
           key={data.id}
