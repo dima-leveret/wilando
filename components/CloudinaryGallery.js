@@ -4,6 +4,7 @@ import styles from "../styles/Components/Gallery.module.css";
 
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
+import PageTitle from "./PageTitle";
 
 const CloudinaryGalery = ({
   images: defaultImages,
@@ -66,6 +67,8 @@ const CloudinaryGalery = ({
 
   return (
     <>
+      <PageTitle title="Galeria" />
+
       <div
         className={isFullScreen ? styles.galleryActive : styles.galleryHidden}
       >
@@ -77,7 +80,6 @@ const CloudinaryGalery = ({
         />
       </div>
 
-      <span className={styles.galleryTitle}>Galeria</span>
       <p className={styles.galleryText}>
         Zainspiruj się naszymi drukami! Każdy obraz może być nadrukowany u
         Ciebie!
