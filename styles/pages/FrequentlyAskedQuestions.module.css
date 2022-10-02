@@ -1,3 +1,14 @@
+.contactFormLink {
+  font-weight: 600;
+  transition: 0.2s;
+  color: #0ac775;
+}
+
+.contactFormLink:hover {
+  transition: 0.2s;
+  color: #00a331;
+}
+
 .facebookLink {
   font-weight: 600;
   transition: 0.2s;
@@ -18,4 +29,18 @@
 .instagramLink:hover {
   transition: 0.2s;
   color: #dd2a7b;
+}
+
+.moreInfo {
+  font-size: 20px;
+  color: #5c6f87;
+  margin: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+  .moreInfo {
+    font-size: 17px;
+    color: #5c6f87;
+    margin: 25px;
+  }
 }
