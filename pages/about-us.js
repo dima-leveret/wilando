@@ -1,14 +1,14 @@
-import style from "../styles/Components/About.module.css";
 import HeadComponent from "../components/HeadComponent";
 import PageTitle from "../components/PageTitle";
+import style from "../styles/pages/About.module.css";
 
 function AboutUs() {
   return (
     <>
       <HeadComponent title="Wilando | About us" />
+      <PageTitle title="O nas" />
 
       <div className={style.container}>
-        <PageTitle title="O nas" />
         <h4>
           Druk ścienny to nowa technologia która pozwala drukować dokładne i
           wysokiej jakości obrazy na prawie każdej pionowej powierzchni wewnątrz
