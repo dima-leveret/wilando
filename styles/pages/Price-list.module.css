@@ -5,10 +5,7 @@
   width: 100%;
 }
 
-.container span {
-  font-size: 20px;
-  text-align: start;
-  margin: 10px;
+.textContainer {
   max-width: 800px;
   width: 100%;
 }

@@ -17,7 +17,11 @@ export const MoreInfo = () => {
         Facebook
       </a>{" "}
       lub{" "}
-      <a className={styles.instagramLink} href="#" target="blank">
+      <a
+        className={styles.instagramLink}
+        href="https://www.instagram.com/wilando.wallprint/"
+        target="blank"
+      >
         Instagram
       </a>{" "}
     </p>

@@ -1,0 +1,18 @@
+.heading {
+  font-size: 40px;
+  font-weight: 500;
+  color: #141d28;
+}
+
+.mark {
+  background: none;
+  color: #0ac775;
+}
+
+.text {
+  font-size: 20px;
+  text-align: left;
+  color: #5c6f87;
+  line-height: 1.5;
+  margin: 15px;
+}
