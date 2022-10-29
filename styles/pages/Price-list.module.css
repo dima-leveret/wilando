@@ -33,12 +33,14 @@
 }
 
 .procingList li {
-  font-size: 20px;
+  display: flex;
+  align-items: center;
   color: #5c6f87;
   text-align: start;
-  padding: 10px 0;
 }
 
 .liIcon {
   color: #0ac775;
+  width: 20px;
+  height: auto;
 }

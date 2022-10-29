@@ -2,6 +2,7 @@
   font-size: 40px;
   font-weight: 500;
   color: #141d28;
+  padding: 0 10px;
 }
 
 .mark {
@@ -15,4 +16,14 @@
   color: #5c6f87;
   line-height: 1.5;
   margin: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+  .heading {
+    font-size: 30px;
+  }
+
+  .text {
+    font-size: 16px;
+  }
 }

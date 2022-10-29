@@ -29,27 +29,28 @@ function PriceList() {
           <ul className={styles.procingList}>
             <li>
               {" "}
-              <IoIosArrowForward className={styles.liIcon} /> Wybraną grafikę
-              (gdy już masz)
+              <IoIosArrowForward className={styles.liIcon} />{" "}
+              <Text text="Wybraną grafikę (gdy już masz)" />
             </li>
             <li>
               {" "}
-              <IoIosArrowForward className={styles.liIcon} /> Zdjęcie ściany
-              wraz z podłogą
+              <IoIosArrowForward className={styles.liIcon} />
+              <Text text=" Zdjęcie ściany wraz z podłogą" />
             </li>
             <li>
               {" "}
-              <IoIosArrowForward className={styles.liIcon} /> Wymiary ściany
-              (szerokość i wysokość od podłogi do sufitu)
+              <IoIosArrowForward className={styles.liIcon} />
+              <Text text="Wymiary ściany (szerokość i wysokość od podłogi do sufitu)" />
             </li>
             <li>
               {" "}
-              <IoIosArrowForward className={styles.liIcon} /> Miejscowość
+              <IoIosArrowForward className={styles.liIcon} />
+              <Text text="Miejscowość" />
             </li>
             <li>
               {" "}
-              <IoIosArrowForward className={styles.liIcon} /> Jakiej wielkości
-              ma być druk
+              <IoIosArrowForward className={styles.liIcon} />
+              <Text text="Jakiej wielkości ma być druk" />
             </li>
           </ul>
         </div>

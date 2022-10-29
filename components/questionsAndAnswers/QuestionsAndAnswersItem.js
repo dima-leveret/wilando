@@ -1,5 +1,6 @@
 import styles from "../../styles/Components/QuestionsAndAnswersItem.module.css";
 import { BsPlusLg } from "react-icons/bs";
+import { Text } from "../Typography";
 
 const QuestionsAndAnswersItem = ({
   question,
@@ -12,7 +13,7 @@ const QuestionsAndAnswersItem = ({
     <div className={styles.item}>
       <div onClick={onClick} className={styles.titleContainer}>
         <span className={styles.questionTitle}> {question} </span>
-        <div className={styles.plusIconContainer} >
+        <div className={styles.plusIconContainer}>
           <BsPlusLg
             className={
               selectedId === itemId ? styles.plusIconRotated : styles.plusIcon
@@ -25,8 +26,7 @@ const QuestionsAndAnswersItem = ({
           selectedId === itemId ? styles.answerOpened : styles.answerClosed
         }
       >
-        {" "}
-        {answer}{" "}
+        {answer}
       </span>
     </div>
   );
