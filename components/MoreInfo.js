@@ -12,7 +12,7 @@ export const MoreInfo = () => {
       <a
         className={styles.facebookLink}
         href="https://www.facebook.com/Wilando.print"
-        target="blank"
+        target="_blank"
       >
         Facebook
       </a>{" "}
@@ -20,7 +20,7 @@ export const MoreInfo = () => {
       <a
         className={styles.instagramLink}
         href="https://www.instagram.com/wilando.wallprint/"
-        target="blank"
+        target="_blank"
       >
         Instagram
       </a>{" "}

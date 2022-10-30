@@ -4,6 +4,9 @@ import Slider from "../components/Slider/Slider";
 import styles from "../styles/pages/Home.module.css";
 import { Heading, Text } from "../components/Typography";
 import { Advantages } from "../components/Advantages";
+import { HowToMakeOrder } from "../components/HowToMakeOrder";
+import Link from "next/link";
+import { MoreInfo } from "../components/MoreInfo";
 
 export default function Home() {
   return (
@@ -29,6 +32,16 @@ export default function Home() {
           <Heading markedFragment="W jaki" heading="sposób to działa?" />
           <Text text="Dla druku używamy pionową drukarkę z możliwością drukowania do 260 cm wysokości, przy czym szerokość wydruku nie jest ograniczona." />
           <Advantages />
+          <HowToMakeOrder />
+          <Heading markedFragment="Masz " heading="pytania?" />
+          <p className={styles.haveAQuestionText}>
+            Gdy jeszcze masz pytania sprawdź{" "}
+            <Link href="/frequently-asked-questions">
+              <a className={styles.linkToFAQ}>FAQ</a>
+            </Link>
+            .
+          </p>
+          <MoreInfo />
         </div>
       </div>
     </>

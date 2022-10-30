@@ -10,3 +10,33 @@
   max-width: 1100px;
   width: 100%;
 }
+
+.haveAQuestionText {
+  font-size: 20px;
+  text-align: left;
+  color: #5c6f87;
+  line-height: 1.5;
+  margin: 15px;
+}
+
+.linkToFAQ {
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.linkToFAQ:hover {
+  transition: 0.2s;
+  color: #0ac775;
+}
+
+@media only screen and (max-width: 768px) {
+  .haveAQuestionText {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .haveAQuestionText {
+    font-size: 14px;
+  }
+}
