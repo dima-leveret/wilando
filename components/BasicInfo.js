@@ -31,8 +31,8 @@ const BasicInfo = () => {
           <BsEnvelope className={styles.infoItemIcon} />
           <div className={styles.infoText}>
             <span>Email</span>
-            <a href="mailto: wilando@gmail.com" className={styles.mail}>
-              wilando@gmail.com
+            <a href="mailto: wilando.art@gmail.com" className={styles.mail}>
+              wilando.art@gmail.com
             </a>
           </div>
         </div>

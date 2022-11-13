@@ -11,7 +11,7 @@ export const MoreInfo = () => {
       oraz przez nasze strony na{" "}
       <a
         className={styles.facebookLink}
-        href="https://www.facebook.com/Wilando.print"
+        href="https://www.facebook.com/Wilando.wallprint"
         target="_blank"
       >
         Facebook

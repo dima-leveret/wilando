@@ -101,8 +101,8 @@ export const HowToMakeOrder = () => {
         <li>
           <p className={styles.text}>
             4. Wyślij do nas na{" "}
-            <a href="mailto: wilando@gmail.com" className={styles.mail}>
-              wilando@gmail.com
+            <a href="mailto: wilando.art@gmail.com" className={styles.mail}>
+              wilando.art@gmail.com
             </a>{" "}
             wybraną grafikę, zdjęcje ściany, napisz wymiary ściany, wielkość
             druku oraz miejscowość

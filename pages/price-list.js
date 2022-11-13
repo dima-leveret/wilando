@@ -17,8 +17,7 @@ function PriceList() {
           wielu czynników takich jak rozmiar grafiki czy miejscowość itp."
           />
           <Text
-            text="Szacunkowy koszt druku do 1m2 wynosi 300 zł netto + VAT (8%
-          dla osób prywatnych oraz 23% dla firm). Cena jest wyliczona dla
+            text="Szacunkowy koszt druku do 1m2 wynosi 300 zł netto + VAT. Cena jest wyliczona dla
           powiatu poznańskiego. Dla tego dla wyceny prosimy o podanie
           miejscowości gdzie ma być wykonany druk."
           />

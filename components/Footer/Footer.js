@@ -46,7 +46,7 @@ function Footer() {
             <MdEmail className={styles.contactUsIcon} />
             <div className={styles.contactUsText}>
               <span>Mail:</span>
-              <a href="mailto:wilando@gmail.com">wilando@gmail.com</a>
+              <a href="mailto:wilando.art@gmail.com">wilando.art@gmail.com</a>
             </div>
           </div>
         </div>
