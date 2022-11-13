@@ -31,7 +31,9 @@ const BasicInfo = () => {
           <BsEnvelope className={styles.infoItemIcon} />
           <div className={styles.infoText}>
             <span>Email</span>
-            <a href="mailto: wilando@gmail.com" className={styles.mail} >wilando@gmail.com</a>
+            <a href="mailto: wilando@gmail.com" className={styles.mail}>
+              wilando@gmail.com
+            </a>
           </div>
         </div>
 
@@ -39,8 +41,7 @@ const BasicInfo = () => {
           <BsClock className={styles.infoItemIcon} />
           <div className={styles.infoText}>
             <span>Godziny pracy biura</span>
-            <p>Pon-Czw: 10:00-20:00</p>
-            <p>Pt: 11:00-18:00</p>
+            <p>Pon-Sub: 8:00-20:00</p>
           </div>
         </div>
       </div>
