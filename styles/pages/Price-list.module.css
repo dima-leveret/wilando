@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1600px;
+  width: 100%;
+}
+
+.textContainer {
+  max-width: 800px;
+  width: 100%;
+}
+
+.pricing {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.pricingTitle {
+  color: #141d28;
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0 10px;
+}
+
+.procingList {
+  align-self: center;
+  list-style: none;
+  margin: 30px 10px;
+  padding: 0;
+}
+
+.procingList li {
+  display: flex;
+  align-items: center;
+  color: #5c6f87;
+  text-align: start;
+}
+
+.liIcon {
+  color: #0ac775;
+  width: 20px;
+  height: auto;
+}

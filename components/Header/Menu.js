@@ -46,9 +46,6 @@ export const Menu = () => {
           <Link href="/price-list">
             <a>Cennik</a>
           </Link>
-          <Link href="/about-us">
-            <a>O nas</a>
-          </Link>
           <Link href="/contact">
             <a>Kontakt</a>
           </Link>

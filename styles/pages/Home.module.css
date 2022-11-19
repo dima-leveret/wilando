@@ -11,13 +11,7 @@
   width: 100%;
 }
 
-.heading {
-  font-size: 40px;
-  font-weight: 500;
-  color: #141d28;
-}
-
-.text {
+.haveAQuestionText {
   font-size: 20px;
   text-align: left;
   color: #5c6f87;
@@ -25,7 +19,24 @@
   margin: 15px;
 }
 
-.mark {
-  background: none;
+.linkToFAQ {
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.linkToFAQ:hover {
+  transition: 0.2s;
   color: #0ac775;
+}
+
+@media only screen and (max-width: 768px) {
+  .haveAQuestionText {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .haveAQuestionText {
+    font-size: 14px;
+  }
 }

@@ -1,0 +1,61 @@
+.makeOrderList,
+.sitesList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sitesList li {
+  display: flex;
+  padding-left: 20px;
+}
+
+.siteLink {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  text-align: left;
+  color: #5c6f87;
+  line-height: 1.5;
+  margin: 15px;
+  transition: 0.2s;
+}
+
+.siteLink:hover {
+  color: #0ac775;
+  transition: 0.2s;
+}
+
+.linkIcon {
+  margin-right: 10px;
+  width: 20px;
+  height: auto;
+  color: #0ac775;
+}
+
+.text {
+  font-size: 20px;
+  text-align: left;
+  color: #5c6f87;
+  line-height: 1.5;
+  margin: 15px;
+}
+
+.mail:hover {
+  color: #0ac775;
+  transition: 0.2s;
+}
+
+@media only screen and (max-width: 768px) {
+  .siteLink,
+  .text {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .siteLink,
+  .text {
+    font-size: 14px;
+  }
+}

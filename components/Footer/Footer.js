@@ -10,9 +10,13 @@ function Footer() {
         <div className={styles.about}>
           <p className={styles.title}>o nas</p>
           <p className={styles.aboutText}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit
-            amet turpis venenatis nulla dignissim scelerisque. Ut volutpat
-            maximus ligula.
+            Druk ścienny to nowa technologia która pozwala drukować dokładne i
+            wysokiej jakości obrazy na prawie każdej pionowej powierzchni
+            wewnątrz lub zewnątrz pomieszczeń. Nasza drukarka pozwala drukować
+            obrazy do 2,5 metry wysokości bez limitu szerokości. Wyjątkowość
+            drukarki polega również na drukowaniu ekologicznymi, przyjaznymi dla
+            środowiska i szybkoschnąncymi atramentami UV. Dzięki temu tusz
+            wysycha błyskawicznie, nie pozostawiając smug ani zapachu.
           </p>
           <SocialLinks />
         </div>
@@ -42,7 +46,7 @@ function Footer() {
             <MdEmail className={styles.contactUsIcon} />
             <div className={styles.contactUsText}>
               <span>Mail:</span>
-              <a href="mailto:wilando@gmail.com">wilando@gmail.com</a>
+              <a href="mailto:wilando.art@gmail.com">wilando.art@gmail.com</a>
             </div>
           </div>
         </div>

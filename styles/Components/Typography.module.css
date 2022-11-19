@@ -1,0 +1,39 @@
+.heading {
+  font-size: 40px;
+  font-weight: 500;
+  color: #141d28;
+  padding: 0 10px;
+}
+
+.mark {
+  background: none;
+  color: #0ac775;
+}
+
+.text {
+  font-size: 20px;
+  text-align: left;
+  color: #5c6f87;
+  line-height: 1.5;
+  margin: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+  .heading {
+    font-size: 30px;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .heading {
+    font-size: 20px;
+  }
+
+  .text {
+    font-size: 14px;
+  }
+}
