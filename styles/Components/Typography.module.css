@@ -5,6 +5,13 @@
   padding: 0 10px;
 }
 
+.headingLarge {
+  font-size: 70px;
+  font-weight: 500;
+  color: #141d28;
+  padding: 0 10px;
+}
+
 .mark {
   background: none;
   color: #0ac775;
@@ -35,5 +42,9 @@
 
   .text {
     font-size: 14px;
+  }
+
+  .headingLarge {
+    font-size: 30px;
   }
 }

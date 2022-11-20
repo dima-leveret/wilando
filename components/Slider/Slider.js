@@ -1,5 +1,3 @@
-import SlideComponent from "./SlideComponent";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper";
 
@@ -8,6 +6,11 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import styles from "../../styles/Components/Slider.module.css";
+import { Heading, Text } from "../Typography";
+import { GiBrickWall } from "react-icons/gi";
+import { MdWallpaper } from "react-icons/md";
+import { TfiGallery } from "react-icons/tfi";
+import Link from "next/link";
 
 const Slider = () => {
   return (
@@ -17,19 +20,56 @@ const Slider = () => {
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 3000,
+          delay: 10000,
           disableOnInteraction: false,
         }}
-        pagination={{
-          clickable: true,
-        }}
         modules={[Autoplay, Pagination]}
-        // className={styles.swiper}
       >
         <SwiperSlide className={styles.swiper}>
-          <SlideComponent sourceImg="/wallprint-DEKORACJA.jpg" />
+          <div className={styles.slide}>
+            <GiBrickWall className={styles.icon} />
+            <div className={styles.slideContainer}>
+              <Heading
+                markedFragment="Dekoracja"
+                heading="ścian"
+                large={true}
+              />
+              <Text text="SZYBKO. JAKOŚCIOWO. BEZ PRZYGOTOWAŃ" />
+            </div>
+          </div>
         </SwiperSlide>
         <SwiperSlide className={styles.swiper}>
+          <div className={styles.slide}>
+            <MdWallpaper className={styles.icon} />
+            <div className={styles.slideContainer}>
+              <Heading
+                markedFragment="Druk"
+                heading="nas płótnie"
+                large={true}
+              />
+              <Text text="STWÓRZ WŁASNY OBRAZ NA PŁÓTNIE" />
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className={styles.swiper}>
+          <div className={styles.slide}>
+            <TfiGallery className={styles.icon} />
+            <div className={styles.slideContainer}>
+              <Heading
+                markedFragment="Zobacz"
+                heading="naszą galerię"
+                large={true}
+              />
+              <div className={styles.textAndBtn}>
+                <Text text="PRZYKŁADY KTÓRE JUZ ZOSTAŁY ZREALIZOWANE" />
+                <Link href="/gallery">
+                  <a>Przejść do galerii</a>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+        {/* <SwiperSlide className={styles.swiper}>
           <SlideComponent sourceImg="/wallprint-PLOTNO.jpg" />
         </SwiperSlide>
         <SwiperSlide className={styles.swiper}>
@@ -37,7 +77,7 @@ const Slider = () => {
         </SwiperSlide>
         <SwiperSlide className={styles.swiper}>
           <SlideComponent sourceImg="/wallprint-PLOTNOsample.jpg" />
-        </SwiperSlide>
+        </SwiperSlide> */}
       </Swiper>
     </div>
   );

@@ -67,8 +67,6 @@ const CloudinaryGalery = ({
 
   return (
     <>
-      <PageTitle title="Galeria" />
-
       <div
         className={isFullScreen ? styles.galleryActive : styles.galleryHidden}
       >
@@ -79,11 +77,6 @@ const CloudinaryGalery = ({
           lazyLoad={true}
         />
       </div>
-
-      <p className={styles.galleryText}>
-        Zainspiruj się naszymi drukami! Każdy obraz może być nadrukowany u
-        Ciebie!
-      </p>
 
       <div className={styles.images}>
         {images.map((image) => {
