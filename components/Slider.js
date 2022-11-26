@@ -5,8 +5,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import styles from "../../styles/Components/Slider.module.css";
-import { Heading, Text } from "../Typography";
+import styles from "../styles/Components/Slider.module.css";
+import { Heading, Text } from "./Typography";
 import { GiBrickWall } from "react-icons/gi";
 import { MdWallpaper } from "react-icons/md";
 import { TfiGallery } from "react-icons/tfi";
@@ -69,15 +69,6 @@ const Slider = () => {
             </div>
           </div>
         </SwiperSlide>
-        {/* <SwiperSlide className={styles.swiper}>
-          <SlideComponent sourceImg="/wallprint-PLOTNO.jpg" />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiper}>
-          <SlideComponent sourceImg="/wallprint-PLOTNOsample-1.jpg" />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiper}>
-          <SlideComponent sourceImg="/wallprint-PLOTNOsample.jpg" />
-        </SwiperSlide> */}
       </Swiper>
     </div>
   );

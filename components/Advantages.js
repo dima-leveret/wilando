@@ -25,7 +25,7 @@ export const Advantages = () => {
             <CgPlayButtonO className={styles.advantageIcon} />
             <span>Prędkość</span>
           </div>
-          <Text text="Szybkość druku osiąga 2-3 m2 na godzinę w zależności od złożoności obrazu" />
+          <Text text="Szybkość druku osiąga 1 m2 na godzinę w zależności od złożoności obrazu" />
         </div>
         <div className={styles.advantage}>
           <div className={styles.advantageTitle}>

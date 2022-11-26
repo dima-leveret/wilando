@@ -1,6 +1,6 @@
 import HeadComponent from "../components/HeadComponent";
 import PageTitle from "../components/PageTitle";
-import Slider from "../components/Slider/Slider";
+import Slider from "../components/Slider";
 import styles from "../styles/pages/Home.module.css";
 import { Heading, Text } from "../components/Typography";
 import { Advantages } from "../components/Advantages";
@@ -30,7 +30,7 @@ export default function Home() {
             firmy, zdjęcie rodzinne, pejzaż lub znany na całym świece obraz może ozdobić ściany Waszego domu, biura, restauracji czy innego pomieszczenia. Jedynym ograniczeniem jest twoja własna wyobrażnia."
           />
           <Heading markedFragment="W jaki" heading="sposób to działa?" />
-          <Text text="Dla druku używamy pionową drukarkę z możliwością drukowania do 260 cm wysokości, przy czym szerokość wydruku nie jest ograniczona." />
+          <Text text="Dla druku używamy pionową drukarkę z możliwością drukowania do 190 cm wysokości, przy czym szerokość wydruku nie jest ograniczona." />
           <Advantages />
           <HowToMakeOrder />
           <Heading markedFragment="Masz " heading="pytania?" />
