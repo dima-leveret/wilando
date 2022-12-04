@@ -1,6 +1,5 @@
 import styles from "../../styles/Components/QuestionsAndAnswersItem.module.css";
 import { BsPlusLg } from "react-icons/bs";
-import { Text } from "../Typography";
 
 const QuestionsAndAnswersItem = ({
   question,

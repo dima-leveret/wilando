@@ -4,7 +4,6 @@ import styles from "../styles/Components/Gallery.module.css";
 
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
-import PageTitle from "./PageTitle";
 
 const CloudinaryGalery = ({
   images: defaultImages,

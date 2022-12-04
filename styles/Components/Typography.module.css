@@ -1,4 +1,4 @@
-.heading {
+.headingPrimary {
   font-size: 40px;
   font-weight: 500;
   color: #141d28;
@@ -17,7 +17,7 @@
   color: #0ac775;
 }
 
-.text {
+.textPrimary {
   font-size: 20px;
   text-align: left;
   color: #5c6f87;
@@ -25,22 +25,35 @@
   margin: 15px;
 }
 
+.pageTitle {
+  padding: 0;
+  margin: 0;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #0ac775;
+}
+
 @media only screen and (max-width: 768px) {
-  .heading {
+  .headingPrimary {
     font-size: 30px;
   }
 
-  .text {
+  .textPrimary {
     font-size: 16px;
+  }
+
+  .pageTitle {
+    font-size: 40px;
   }
 }
 
 @media only screen and (max-width: 500px) {
-  .heading {
+  .headingPrimary {
     font-size: 20px;
   }
 
-  .text {
+  .textPrimary {
     font-size: 14px;
   }
 
