@@ -1,20 +1,34 @@
-import { Heading, Text } from "./Typography";
+import { Typography } from "./Typography";
 import styles from "../styles/Components/HowToMakeOrder.module.css";
 import { ImLink } from "react-icons/im";
 
 export const HowToMakeOrder = () => {
   return (
     <>
-      <Heading markedFragment="Jak " heading="złożyć zamówienie?" />
+      <Typography
+        heading
+        styleVariant="headingPrimary"
+        markedFragment="Jak "
+        children="złożyć zamówienie?"
+      />
       <ul className={styles.makeOrderList}>
         <li>
-          <Text text="1. Wybierz miejsce druku" />
+          <Typography
+            styleVariant="textPrimary"
+            children="1. Wybierz miejsce druku"
+          />
         </li>
         <li>
-          <Text text="2. Zrób zdjęcie miejsca druku razem z podłogą" />
+          <Typography
+            styleVariant="textPrimary"
+            children="2. Zrób zdjęcie miejsca druku razem z podłogą"
+          />
         </li>
         <li>
-          <Text text="3. Wybierz grafikę druku. Obraz może być dowolny na Wasze życzenie. Możesz szukać grafiki na serwisach z grafiką:" />
+          <Typography
+            styleVariant="textPrimary"
+            children="3. Wybierz grafikę druku. Obraz może być dowolny na Wasze życzenie. Możesz szukać grafiki na serwisach z grafiką:"
+          />
           <ul className={styles.sitesList}>
             <li>
               <a
@@ -99,17 +113,20 @@ export const HowToMakeOrder = () => {
           </ul>
         </li>
         <li>
-          <p className={styles.text}>
+          <Typography styleVariant="textPrimary">
             4. Wyślij do nas na{" "}
             <a href="mailto: wilando.art@gmail.com" className={styles.mail}>
               wilando.art@gmail.com
             </a>{" "}
             wybraną grafikę, zdjęcje ściany, napisz wymiary ściany, wielkość
             druku oraz miejscowość
-          </p>
+          </Typography>
         </li>
         <li>
-          <Text text="5. Po otrzymaniu wiadomości nasi pracownicy skontaktują się z Tobą już z wyceną projektu" />
+          <Typography
+            styleVariant="textPrimary"
+            children="5. Po otrzymaniu wiadomości nasi pracownicy skontaktują się z Tobą już z wyceną projektu"
+          />
         </li>
       </ul>
     </>

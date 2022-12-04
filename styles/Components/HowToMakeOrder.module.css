@@ -33,12 +33,9 @@
   color: #0ac775;
 }
 
-.text {
-  font-size: 20px;
-  text-align: left;
-  color: #5c6f87;
-  line-height: 1.5;
-  margin: 15px;
+.mail {
+  font-weight: 500;
+  transition: 0.2s;
 }
 
 .mail:hover {
@@ -47,15 +44,13 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .siteLink,
-  .text {
+  .siteLink {
     font-size: 16px;
   }
 }
 
 @media only screen and (max-width: 500px) {
-  .siteLink,
-  .text {
+  .siteLink {
     font-size: 14px;
   }
 }

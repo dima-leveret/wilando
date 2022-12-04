@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import PageTitle from "../components/PageTitle";
+import { Typography } from "../components/Typography";
 
 import styles from "../styles/Components/NotFound.module.css";
 
@@ -16,7 +16,7 @@ const NotFound = () => {
 
   return (
     <div className={styles.container}>
-      <PageTitle title="404" />
+      <Typography styleVariant="pageTitle" children="404" />
       <h1>Oooooops...</h1>
       <h2>That page cannot be found.</h2>
       <p>

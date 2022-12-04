@@ -1,18 +1,18 @@
 import HeadComponent from "../components/HeadComponent";
 import { search, mapImageResources } from "../src/lib/coudinary";
 import CloudinaryGalery from "../components/CloudinaryGallery";
-import { Text } from "../components/Typography";
-import PageTitle from "../components/PageTitle";
+import { Typography } from "../components/Typography";
 
 function Galery({ images, nextCursor }) {
   return (
     <>
       <HeadComponent title="Wilando | Galery" />
 
-      <PageTitle title="Galeria" />
+      <Typography styleVariant="pageTitle" children="Galeria" />
 
-      <Text
-        text="Zainspiruj się naszymi drukami! Każdy obraz może być nadrukowany u
+      <Typography
+        styleVariant="textPrimary"
+        children="Zainspiruj się naszymi drukami! Każdy obraz może być nadrukowany u
         Ciebie!"
       />
 

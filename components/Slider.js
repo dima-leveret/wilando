@@ -6,7 +6,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import styles from "../styles/Components/Slider.module.css";
-import { Heading, Text } from "./Typography";
+import { Typography } from "./Typography";
 import { GiBrickWall } from "react-icons/gi";
 import { MdWallpaper } from "react-icons/md";
 import { TfiGallery } from "react-icons/tfi";
@@ -20,7 +20,7 @@ const Slider = () => {
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 10000,
+          delay: 5000,
           disableOnInteraction: false,
         }}
         modules={[Autoplay, Pagination]}
@@ -29,12 +29,16 @@ const Slider = () => {
           <div className={styles.slide}>
             <GiBrickWall className={styles.icon} />
             <div className={styles.slideContainer}>
-              <Heading
+              <Typography
+                styleVariant="headingLarge"
                 markedFragment="Dekoracja"
-                heading="ścian"
-                large={true}
+                children="ścian"
+                heading
               />
-              <Text text="SZYBKO. JAKOŚCIOWO. BEZ PRZYGOTOWAŃ" />
+              <Typography
+                styleVariant="textPrimary"
+                children="SZYBKO. JAKOŚCIOWO. BEZ PRZYGOTOWAŃ"
+              />
             </div>
           </div>
         </SwiperSlide>
@@ -42,12 +46,16 @@ const Slider = () => {
           <div className={styles.slide}>
             <MdWallpaper className={styles.icon} />
             <div className={styles.slideContainer}>
-              <Heading
+              <Typography
+                styleVariant="headingLarge"
                 markedFragment="Druk"
-                heading="nas płótnie"
-                large={true}
+                children="nas płótnie"
+                heading
               />
-              <Text text="STWÓRZ WŁASNY OBRAZ NA PŁÓTNIE" />
+              <Typography
+                styleVariant="textPrimary"
+                children="STWÓRZ WŁASNY OBRAZ NA PŁÓTNIE"
+              />
             </div>
           </div>
         </SwiperSlide>
@@ -55,13 +63,17 @@ const Slider = () => {
           <div className={styles.slide}>
             <TfiGallery className={styles.icon} />
             <div className={styles.slideContainer}>
-              <Heading
+              <Typography
+                styleVariant="headingLarge"
                 markedFragment="Zobacz"
-                heading="naszą galerię"
-                large={true}
+                children="naszą galerię"
+                heading
               />
               <div className={styles.textAndBtn}>
-                <Text text="PRZYKŁADY KTÓRE JUZ ZOSTAŁY ZREALIZOWANE" />
+                <Typography
+                  styleVariant="textPrimary"
+                  children="PRZYKŁADY KTÓRE JUZ ZOSTAŁY ZREALIZOWANE"
+                />
                 <Link href="/gallery">
                   <a>Przejść do galerii</a>
                 </Link>
