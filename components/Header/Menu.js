@@ -4,9 +4,9 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import disableScroll from "disable-scroll";
 import { useState } from "react";
 
-import { LogoIconBlack } from "../../assets/Icons";
+import { LogoIcon } from "../../assets/Icons";
 
-export const Menu = () => {
+export const Menu = ({ displayTopLine }) => {
   const [burgerMenu, setBurgerMenu] = useState(false);
 
   const showBugerMenu = () => {
@@ -22,8 +22,11 @@ export const Menu = () => {
   return (
     <div className={styles.menu}>
       <Link href="/">
-        <a onClick={closeBurgerMenu} className={styles.logo}>
-          <LogoIconBlack />
+        <a
+          onClick={closeBurgerMenu}
+          className={displayTopLine ? styles.logo : styles.logoSmall}
+        >
+          <LogoIcon />
         </a>
       </Link>
       <div

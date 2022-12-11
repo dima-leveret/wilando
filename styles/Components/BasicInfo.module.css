@@ -15,7 +15,7 @@
 
 .basicInfo {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   max-width: 1200px;
   width: 100%;
 }
@@ -67,12 +67,12 @@
 
 @media only screen and (max-width: 1000px) {
   .basicInfo {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .basicInfo {
     grid-template-columns: 1fr;
   }
 }
+
+/* @media only screen and (max-width: 500px) {
+  .basicInfo {
+    grid-template-columns: 1fr;
+  }
+} */

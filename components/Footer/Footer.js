@@ -32,7 +32,7 @@ function Footer() {
             </div>
           </div>
 
-          <div className={styles.contactUsItem}>
+          {/* <div className={styles.contactUsItem}>
             <MdPhone className={styles.contactUsIcon} />
             <div className={styles.contactUsText}>
               <span>Telefon:</span>
@@ -40,7 +40,7 @@ function Footer() {
                 +48 123 123 123
               </a>
             </div>
-          </div>
+          </div> */}
 
           <div className={styles.contactUsItem}>
             <MdEmail className={styles.contactUsIcon} />
@@ -51,7 +51,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <DimaLeveret />
+      {/* <DimaLeveret /> */}
     </footer>
   );
 }
