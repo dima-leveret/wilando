@@ -13,7 +13,7 @@ function Footer() {
             Druk ścienny to nowa technologia która pozwala drukować dokładne i
             wysokiej jakości obrazy na prawie każdej pionowej powierzchni
             wewnątrz lub zewnątrz pomieszczeń. Nasza drukarka pozwala drukować
-            obrazy do 2,5 metry wysokości bez limitu szerokości. Wyjątkowość
+            obrazy do 190 cm wysokości bez limitu szerokości. Wyjątkowość
             drukarki polega również na drukowaniu ekologicznymi, przyjaznymi dla
             środowiska i szybkoschnąncymi atramentami UV. Dzięki temu tusz
             wysycha błyskawicznie, nie pozostawiając smug ani zapachu.
