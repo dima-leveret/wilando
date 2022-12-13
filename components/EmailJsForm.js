@@ -10,14 +10,14 @@ function EmailJsForm() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    //my dev sending form
+    //wilando send form data
 
     emailjs
       .sendForm(
-        `${process.env.NEXT_PUBLIC_DIMA_EMAILJS_SERVICE_ID}`,
-        `${process.env.NEXT_PUBLIC_DIMA_EMAILJS_TEMPLATE_ID}`,
+        `${process.env.NEXT_PUBLIC_WILANDO_EMAILJS_SERVICE_ID}`,
+        `${process.env.NEXT_PUBLIC_WILANDO_EMAILJS_TEMPLATE_ID}`,
         form.current,
-        `${process.env.NEXT_PUBLIC_DIMA_EMAILJS_PUBLIC_KEY}`
+        `${process.env.NEXT_PUBLIC_WILANDO_EMAILJS_PUBLIC_KEY}`
       )
       .then(
         (result) => {
@@ -28,25 +28,6 @@ function EmailJsForm() {
           console.log(error.text);
         }
       );
-
-    //wilando send form data
-
-    // emailjs
-    //   .sendForm(
-    //     `${process.env.NEXT_PUBLIC_WILANDO_EMAILJS_SERVICE_ID}`,
-    //     `${process.env.NEXT_PUBLIC_WILANDO_EMAILJS_TEMPLATE_ID}`,
-    //     form.current,
-    //     `${process.env.NEXT_PUBLIC_WILANDO_EMAILJS_PUBLIC_KEY}`
-    //   )
-    //   .then(
-    //     (result) => {
-    //       console.log(result.text);
-    //       setStatus(result);
-    //     },
-    //     (error) => {
-    //       console.log(error.text);
-    //     }
-    //   );
 
     form.current.reset();
   };
@@ -103,7 +84,7 @@ function EmailJsForm() {
 
           <div className={styles.btnContainer}>
             <input type="submit" value="Wyślij" className={styles.btn} />
-            {!status ? null : <FaIcons.FaCheck className={styles.checkIcon}/>}
+            {!status ? null : <FaIcons.FaCheck className={styles.checkIcon} />}
           </div>
         </form>
       </div>

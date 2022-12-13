@@ -7,7 +7,7 @@ const BasicInfo = () => {
   return (
     <div className={styles.basicInfoContainer}>
       <div className={styles.basicInfo}>
-        <div className={styles.infoItem}>
+        {/* <div className={styles.infoItem}>
           <GiSmartphone className={styles.infoItemIcon} />
           <div className={styles.infoText}>
             <span>Telefon</span>
@@ -16,7 +16,7 @@ const BasicInfo = () => {
               123 456 789
             </a>
           </div>
-        </div>
+        </div> */}
 
         <div className={styles.infoItem}>
           <IoLocationOutline className={styles.infoItemIcon} />
