@@ -128,9 +128,9 @@
     justify-content: space-between;
   }
 
-  .logo {
+  /* .logo {
     max-width: 100px;
-  }
+  } */
 
   .navBar {
     right: -100%;
