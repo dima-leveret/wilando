@@ -22,7 +22,7 @@ export default function Home() {
             styleVariant="headingPrimary"
             heading
             markedFragment="Witamy"
-            children="świece unikalnych
+            children="w świece unikalnych
             technologij dekoru!"
           />
           <Typography
