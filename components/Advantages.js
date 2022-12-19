@@ -62,7 +62,7 @@ export const Advantages = () => {
           </div>
           <Typography
             styleVariant="textPrimary"
-            children="Grafika drukowana jest drukowana atramentami UV i od razu utwardzana światłem UV. Co gwarantuję wysoką trwałość druku i odporność na warunki atmosferyczne"
+            children="Grafika jest drukowana atramentami UV i od razu utwardzana światłem UV. Co gwarantuję wysoką trwałość druku i odporność na warunki atmosferyczne"
           />
         </div>
         <div className={styles.advantage}>
