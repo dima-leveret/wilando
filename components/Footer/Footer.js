@@ -51,7 +51,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      {/* <DimaLeveret /> */}
+      <DimaLeveret />
     </footer>
   );
 }

@@ -75,3 +75,45 @@
   color: #0ac775;
   transition: 0.2s;
 }
+
+.dimaContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dimaSocialLinks {
+  display: flex;
+  justify-content: space-between;
+  max-width: 50px;
+  width: 100%;
+  margin: 20px;
+}
+
+.dimaLinkedin,
+.dimaFacebook {
+  transition: 0.2s;
+  color: #5c6f87;
+}
+
+.dimaLinkedin:hover {
+  transition: 0.2s;
+  color: #0072b1;
+}
+
+.dimaFacebook:hover {
+  transition: 0.2s;
+  color: #3b5998;
+}
+
+.dimaSocialLinks a {
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (max-width: 500px) {
+  .dimaContainer {
+    flex-direction: column;
+  }
+}
