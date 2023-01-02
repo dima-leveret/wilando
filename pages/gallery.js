@@ -23,7 +23,7 @@ function Galery({ images, nextCursor }) {
 
 export default Galery;
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const results = await search({
     max_results: 9,
   });
