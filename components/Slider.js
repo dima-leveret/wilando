@@ -49,7 +49,7 @@ const Slider = () => {
               <Typography
                 styleVariant="headingLarge"
                 markedFragment="Druk"
-                children="nas płótnie"
+                children="na płótnie"
                 heading
               />
               <Typography
