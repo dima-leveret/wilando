@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { mapImageResources } from "../src/lib/coudinary";
 import styles from "../styles/Components/Gallery.module.css";
-
+import { Typography } from "./Typography";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 
@@ -91,7 +91,6 @@ const CloudinaryGalery = ({
                 layout="fill"
                 objectFit="cover"
                 priority
-                // className={styles.image}
               />
             </div>
           );
@@ -102,7 +101,9 @@ const CloudinaryGalery = ({
           Pokaż więcej
         </button>
       ) : (
-        <p>To są wszystkie zdjęcia które obecnie mamy 😃</p>
+        <Typography styleVariant="textPrimary">
+          To są wszystkie zdjęcia które obecnie mamy 😃
+        </Typography>
       )}
     </>
   );
