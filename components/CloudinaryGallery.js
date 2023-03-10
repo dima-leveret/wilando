@@ -5,6 +5,8 @@ import styles from "../styles/Components/Gallery.module.css";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 
+import Image from "next/image";
+
 const CloudinaryGalery = ({
   images: defaultImages,
   nextCursor: defaultNextCursor,
@@ -67,8 +69,7 @@ const CloudinaryGalery = ({
   return (
     <>
       <div
-        className={isFullScreen ? styles.galleryActive : styles.galleryHidden}
-      >
+        className={isFullScreen ? styles.galleryActive : styles.galleryHidden}>
         <ImageGallery
           useBrowserFullscreen={false}
           ref={imagesGalleryProps}
@@ -83,12 +84,14 @@ const CloudinaryGalery = ({
             <div
               key={image.id}
               className={styles.imgContainer}
-              onClick={() => showFullScreen(image)}
-            >
-              <img
+              onClick={() => showFullScreen(image)}>
+              <Image
                 alt={image.title}
                 src={image.original}
-                className={styles.image}
+                layout="fill"
+                objectFit="cover"
+                priority
+                // className={styles.image}
               />
             </div>
           );
