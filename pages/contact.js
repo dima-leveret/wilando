@@ -4,10 +4,11 @@ import HeadComponent from "../components/HeadComponent";
 import GoogleMapIframe from "../components/GoogleMapIframe";
 import styles from "../styles/pages/Kontakt.module.css";
 import { Typography } from "../components/Typography";
+import Layout from "../components/Layout";
 
 function Contact() {
   return (
-    <>
+    <Layout>
       <HeadComponent title="Wilando | Contact" />
       <Typography styleVariant="pageTitle" children="Kontakt" />
       <BasicInfo />
@@ -17,7 +18,7 @@ function Contact() {
           <EmailJsForm />
         </div>
       </div>
-    </>
+    </Layout>
   );
 }
 

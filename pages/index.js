@@ -6,10 +6,11 @@ import { HowToMakeOrder } from "../components/HowToMakeOrder";
 import Link from "next/link";
 import { MoreInfo } from "../components/MoreInfo";
 import { Typography } from "../components/Typography";
+import Layout from "../components/Layout";
 
 export default function Home() {
   return (
-    <>
+    <Layout>
       <HeadComponent title="Wilando" />
 
       <Typography styleVariant="pageTitle" children="Główna" />
@@ -61,6 +62,6 @@ export default function Home() {
         </div>
       </div>
       <MoreInfo />
-    </>
+    </Layout>
   );
 }

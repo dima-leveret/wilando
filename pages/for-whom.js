@@ -1,4 +1,5 @@
 import HeadComponent from "../components/HeadComponent";
+import Layout from "../components/Layout";
 import styles from "../styles/pages/For-whom.module.css";
 import { Typography } from "../components/Typography";
 import { AiOutlineArrowRight } from "react-icons/ai";
@@ -7,7 +8,7 @@ import { FaRegBuilding } from "react-icons/fa";
 
 function ForWhom() {
   return (
-    <>
+    <Layout>
       <HeadComponent title="Wilando | Fro whom" />
       <Typography styleVariant="pageTitle" children="Dla kogo" />
 
@@ -86,7 +87,7 @@ function ForWhom() {
         markedFragment="Wszystko "
         children="zrobisz bez żadnych przygotowań podłoża!"
       />
-    </>
+    </Layout>
   );
 }
 

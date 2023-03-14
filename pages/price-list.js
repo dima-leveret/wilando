@@ -3,10 +3,11 @@ import styles from "../styles/pages/Price-list.module.css";
 import { IoIosArrowForward } from "react-icons/io";
 import { MoreInfo } from "../components/MoreInfo";
 import { Typography } from "../components/Typography";
+import Layout from "../components/Layout";
 
 function PriceList() {
   return (
-    <>
+    <Layout>
       <HeadComponent title="Wilando | Price list" />
       <Typography styleVariant="pageTitle" children="Cennik" />
       <div className={styles.container}>
@@ -68,7 +69,7 @@ function PriceList() {
         </div>
       </div>
       <MoreInfo />
-    </>
+    </Layout>
   );
 }
 

@@ -2,10 +2,11 @@ import HeadComponent from "../components/HeadComponent";
 import { search, mapImageResources } from "../src/lib/coudinary";
 import CloudinaryGalery from "../components/CloudinaryGallery";
 import { Typography } from "../components/Typography";
+import Layout from "../components/Layout";
 
 function Galery({ images, nextCursor }) {
   return (
-    <>
+    <Layout>
       <HeadComponent title="Wilando | Galery" />
 
       <Typography styleVariant="pageTitle" children="Galeria" />
@@ -17,7 +18,7 @@ function Galery({ images, nextCursor }) {
       />
 
       <CloudinaryGalery images={images} nextCursor={nextCursor} />
-    </>
+    </Layout>
   );
 }
 

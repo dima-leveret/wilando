@@ -6,15 +6,21 @@ import { useState, useEffect } from "react";
 function Header() {
   const [displayTopLine, setDisplayTopLine] = useState(true);
 
+  const changeTopLine = () => {
+    if (window.pageYOffset > 0) {
+      setDisplayTopLine(false);
+    }
+    if (window.pageYOffset === 0) {
+      setDisplayTopLine(true);
+    }
+  };
+
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.pageYOffset > 0) {
-        setDisplayTopLine(false);
-      }
-      if (window.pageYOffset === 0) {
-        setDisplayTopLine(true);
-      }
-    });
+    window.addEventListener("scroll", changeTopLine);
+
+    return () => {
+      window.removeEventListener("scroll", changeTopLine);
+    };
   }, []);
 
   return (
@@ -23,8 +29,7 @@ function Header() {
         displayTopLine
           ? styles.header
           : `${styles.header} ${styles.headerNarrow}`
-      }
-    >
+      }>
       <div className={styles.headerContainer}>
         <TopLine />
         <Menu displayTopLine={displayTopLine} />
