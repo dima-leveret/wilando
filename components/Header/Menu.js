@@ -3,10 +3,12 @@ import styles from "../../styles/Components/Header.module.css";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import disableScroll from "disable-scroll";
 import { useState } from "react";
-
 import { LogoIcon } from "../../assets/Icons";
+import { useTranslation } from "next-i18next";
 
 export const Menu = ({ displayTopLine }) => {
+  const { t } = useTranslation("pageTitle");
+
   const [burgerMenu, setBurgerMenu] = useState(false);
 
   const showBugerMenu = () => {
@@ -24,18 +26,16 @@ export const Menu = ({ displayTopLine }) => {
       <Link href="/">
         <a
           onClick={closeBurgerMenu}
-          className={displayTopLine ? styles.logo : styles.logoSmall}
-        >
+          className={displayTopLine ? styles.logo : styles.logoSmall}>
           <LogoIcon />
         </a>
       </Link>
       <div
         className={burgerMenu ? styles.navBarActive : styles.navBar}
-        onClick={closeBurgerMenu}
-      >
+        onClick={closeBurgerMenu}>
         <nav className={styles.nav}>
           <Link href="/">
-            <a>Główna</a>
+            <a>{t("page-title-index")}</a>
           </Link>
           <Link href="/gallery">
             <a>Galeria</a>

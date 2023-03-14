@@ -3,6 +3,8 @@ import { search, mapImageResources } from "../src/lib/coudinary";
 import CloudinaryGalery from "../components/CloudinaryGallery";
 import { Typography } from "../components/Typography";
 import Layout from "../components/Layout";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
 
 function Galery({ images, nextCursor }) {
   return (
@@ -24,7 +26,7 @@ function Galery({ images, nextCursor }) {
 
 export default Galery;
 
-export const getServerSideProps = async () => {
+export const getServerSideProps = async ({ locale }) => {
   const results = await search({
     max_results: 9,
   });
@@ -37,6 +39,7 @@ export const getServerSideProps = async () => {
     props: {
       images,
       nextCursor: nextCursor || null,
+      ...(await serverSideTranslations(locale, ["pageTitle"])),
     },
   };
 };

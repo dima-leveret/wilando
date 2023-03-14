@@ -7,13 +7,16 @@ import Link from "next/link";
 import { MoreInfo } from "../components/MoreInfo";
 import { Typography } from "../components/Typography";
 import Layout from "../components/Layout";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
 
 export default function Home() {
+  const { t } = useTranslation("pageTitle");
   return (
     <Layout>
       <HeadComponent title="Wilando" />
 
-      <Typography styleVariant="pageTitle" children="Główna" />
+      <Typography styleVariant="pageTitle" children={t("page-title-index")} />
 
       <Slider />
 
@@ -65,3 +68,11 @@ export default function Home() {
     </Layout>
   );
 }
+
+export const getStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["pageTitle"])),
+    },
+  };
+};
