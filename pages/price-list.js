@@ -4,12 +4,18 @@ import { IoIosArrowForward } from "react-icons/io";
 import { MoreInfo } from "../components/MoreInfo";
 import { Typography } from "../components/Typography";
 import Layout from "../components/Layout";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
 
 function PriceList() {
+  const { t } = useTranslation("pageTitle");
   return (
     <Layout>
       <HeadComponent title="Wilando | Price list" />
-      <Typography styleVariant="pageTitle" children="Cennik" />
+      <Typography
+        styleVariant="pageTitle"
+        children={t("page-title-price-list")}
+      />
       <div className={styles.container}>
         <div className={styles.textContainer}>
           <Typography
@@ -74,3 +80,11 @@ function PriceList() {
 }
 
 export default PriceList;
+
+export const getStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["pageTitle"])),
+    },
+  };
+};

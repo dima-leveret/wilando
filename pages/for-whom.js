@@ -5,12 +5,19 @@ import { Typography } from "../components/Typography";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { BsHouseDoor } from "react-icons/bs";
 import { FaRegBuilding } from "react-icons/fa";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
 
 function ForWhom() {
+  const { t } = useTranslation("pageTitle");
+
   return (
     <Layout>
       <HeadComponent title="Wilando | Fro whom" />
-      <Typography styleVariant="pageTitle" children="Dla kogo" />
+      <Typography
+        styleVariant="pageTitle"
+        children={t("page-title-for-whom")}
+      />
 
       <Typography
         heading
@@ -92,3 +99,11 @@ function ForWhom() {
 }
 
 export default ForWhom;
+
+export const getStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["pageTitle"])),
+    },
+  };
+};

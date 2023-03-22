@@ -1,8 +1,14 @@
 import styles from "../../styles/Components/Header.module.css";
 import { SocialLinks } from "../SocialLinks";
-// import { ImPhone } from "react-icons/im";
+import { useRouter } from "next/router";
 
 export const TopLine = () => {
+  const { locales, locale, push } = useRouter();
+
+  const handleClick = (l) => {
+    push("/", undefined, { locale: l });
+  };
+
   return (
     <div className={styles.topLine}>
       {/* <span className={styles.phoneNrContainer}>
@@ -12,6 +18,14 @@ export const TopLine = () => {
         </a>
       </span> */}
       <SocialLinks />
+
+      <div>
+        {locales.map((l) => (
+          <button onClick={() => handleClick(l)} key={l}>
+            {l}
+          </button>
+        ))}
+      </div>
     </div>
   );
 };

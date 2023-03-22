@@ -5,12 +5,15 @@ import GoogleMapIframe from "../components/GoogleMapIframe";
 import styles from "../styles/pages/Kontakt.module.css";
 import { Typography } from "../components/Typography";
 import Layout from "../components/Layout";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
 
 function Contact() {
+  const { t } = useTranslation("pageTitle");
   return (
     <Layout>
       <HeadComponent title="Wilando | Contact" />
-      <Typography styleVariant="pageTitle" children="Kontakt" />
+      <Typography styleVariant="pageTitle" children={t("page-title-contact")} />
       <BasicInfo />
       <div className={styles.mapContact}>
         <div className={styles.mapContactContainer}>
@@ -23,3 +26,11 @@ function Contact() {
 }
 
 export default Contact;
+
+export const getStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["pageTitle"])),
+    },
+  };
+};

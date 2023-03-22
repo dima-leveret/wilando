@@ -26,31 +26,33 @@ export const Menu = ({ displayTopLine }) => {
       <Link href="/">
         <a
           onClick={closeBurgerMenu}
-          className={displayTopLine ? styles.logo : styles.logoSmall}>
+          className={displayTopLine ? styles.logo : styles.logoSmall}
+        >
           <LogoIcon />
         </a>
       </Link>
       <div
         className={burgerMenu ? styles.navBarActive : styles.navBar}
-        onClick={closeBurgerMenu}>
+        onClick={closeBurgerMenu}
+      >
         <nav className={styles.nav}>
           <Link href="/">
             <a>{t("page-title-index")}</a>
           </Link>
           <Link href="/gallery">
-            <a>Galeria</a>
+            <a>{t("page-title-gallery")}</a>
           </Link>
           <Link href="/for-whom">
-            <a>Dla kogo</a>
+            <a>{t("page-title-for-whom")}</a>
           </Link>
           <Link href="/frequently-asked-questions">
-            <a>FAQ</a>
+            <a>{t("page-title-faq")}</a>
           </Link>
           <Link href="/price-list">
-            <a>Cennik</a>
+            <a>{t("page-title-price-list")}</a>
           </Link>
           <Link href="/contact">
-            <a>Kontakt</a>
+            <a>{t("page-title-contact")}</a>
           </Link>
         </nav>
       </div>

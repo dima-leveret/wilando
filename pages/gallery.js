@@ -7,11 +7,13 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 
 function Galery({ images, nextCursor }) {
+  const { t } = useTranslation("pageTitle");
+
   return (
     <Layout>
       <HeadComponent title="Wilando | Galery" />
 
-      <Typography styleVariant="pageTitle" children="Galeria" />
+      <Typography styleVariant="pageTitle" children={t("page-title-gallery")} />
 
       <Typography
         styleVariant="textPrimary"
