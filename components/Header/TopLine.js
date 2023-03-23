@@ -19,9 +19,13 @@ export const TopLine = () => {
       </span> */}
       <SocialLinks />
 
-      <div>
+      <div className={styles.lngBtnContainer}>
         {locales.map((l) => (
-          <button onClick={() => handleClick(l)} key={l}>
+          <button
+            className={styles.lngBtn}
+            onClick={() => handleClick(l)}
+            key={l}
+          >
             {l}
           </button>
         ))}

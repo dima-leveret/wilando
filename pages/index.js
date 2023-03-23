@@ -11,12 +11,15 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 
 export default function Home() {
-  const { t } = useTranslation("pageTitle");
+  const { t } = useTranslation();
   return (
     <Layout>
       <HeadComponent title="Wilando" />
 
-      <Typography styleVariant="pageTitle" children={t("page-title-index")} />
+      <Typography
+        styleVariant="pageTitle"
+        children={t("pageTitle:page-title-index")}
+      />
 
       <Slider />
 
@@ -25,25 +28,22 @@ export default function Home() {
           <Typography
             styleVariant="headingPrimary"
             heading
-            markedFragment="Witamy"
-            children="w świece unikalnych
-            technologij dekoru!"
+            markedFragment={t("homePage:home-greatings-1")}
+            children={t("homePage:home-greatings-2")}
           />
           <Typography
             styleVariant="textPrimary"
-            children="Chcesz dodać w swoje życie barw czy inspiracji? Wyróżnić swoje mieszkanie lub miejsce pracy? Zapraszamy do współpracy z naszym
-            zespołem Wilando. Prezentujemy Wam nową możliwość dekorowania ścian i innych powierzchni za pomocą pionowej drukarki. Teraz logo Waszej
-            firmy, zdjęcie rodzinne, pejzaż lub znany na całym świece obraz może ozdobić ściany Waszego domu, biura, restauracji czy innego pomieszczenia. Jedynym ograniczeniem jest twoja własna wyobrażnia."
+            children={t("homePage:home-text-1")}
           />
           <Typography
             heading
-            markedFragment="W jaki"
+            markedFragment={t("homePage:home-title-1")}
             styleVariant="headingPrimary"
-            children="sposób to działa?"
+            children={t("homePage:home-title-2")}
           />
           <Typography
             styleVariant="textPrimary"
-            children="Dla druku używamy pionową drukarkę z możliwością drukowania do 190 cm wysokości, przy czym szerokość wydruku nie jest ograniczona."
+            children={t("homePage:home-text-2")}
           />
 
           <Advantages />
@@ -52,11 +52,11 @@ export default function Home() {
           <Typography
             heading
             styleVariant="headingPrimary"
-            markedFragment="Masz "
-            children="pytania?"
+            markedFragment={t("homePage:home-title-3")}
+            children={t("homePage:home-title-4")}
           />
           <Typography styleVariant="textPrimary">
-            Gdy jeszcze masz pytania sprawdź{" "}
+            {t("homePage:home-text-3")}{" "}
             <Link href="/frequently-asked-questions">
               <a className={styles.linkToFAQ}>FAQ</a>
             </Link>
@@ -69,10 +69,17 @@ export default function Home() {
   );
 }
 
-export const getStaticProps = async ({ locale }) => {
+export const getServerSideProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["pageTitle"])),
+      ...(await serverSideTranslations(locale, [
+        "pageTitle",
+        "homePage",
+        "advantages",
+        "makeOrder",
+        "slider",
+        "moreInfo",
+      ])),
     },
   };
 };

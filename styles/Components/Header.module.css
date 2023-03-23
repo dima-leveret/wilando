@@ -14,7 +14,7 @@
   opacity: 0.99;
   transition: 0.3s ease-in-out;
   position: fixed;
-  top: -43px;
+  top: -45px;
   background-color: #141d28;
 }
 
@@ -33,6 +33,21 @@
   border-bottom: 1px solid #4f5b6b;
   padding: 10px 0;
   z-index: 10;
+}
+
+.lngBtn {
+  background-color: transparent;
+  line-height: 1;
+  color: #fff;
+  border: none;
+  transition: 0.2s ease-in-out;
+  margin-left: 10px;
+}
+
+.lngBtn:hover {
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  color: #0ac775;
 }
 
 /* .phoneNrContainer {
@@ -63,7 +78,6 @@
   width: 100%;
   justify-content: space-around;
   align-items: center;
-  /* padding: 10px 0; */
 }
 
 .logo {

@@ -1,33 +1,36 @@
 import { Typography } from "./Typography";
 import styles from "../styles/Components/HowToMakeOrder.module.css";
 import { ImLink } from "react-icons/im";
+import { useTranslation } from "next-i18next";
 
 export const HowToMakeOrder = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <Typography
         heading
         styleVariant="headingPrimary"
-        markedFragment="Jak "
-        children="złożyć zamówienie?"
+        markedFragment={t("makeOrder:makeOrder-title-1")}
+        children={t("makeOrder:makeOrder-title-2")}
       />
       <ul className={styles.makeOrderList}>
         <li>
           <Typography
             styleVariant="textPrimary"
-            children="1. Wybierz miejsce druku"
+            children={t("makeOrder:makeOrder-1")}
           />
         </li>
         <li>
           <Typography
             styleVariant="textPrimary"
-            children="2. Zrób zdjęcie miejsca druku razem z podłogą"
+            children={t("makeOrder:makeOrder-2")}
           />
         </li>
         <li>
           <Typography
             styleVariant="textPrimary"
-            children="3. Wybierz grafikę druku. Obraz może być dowolny na Wasze życzenie. Możesz szukać grafiki na serwisach z grafiką:"
+            children={t("makeOrder:makeOrder-3")}
           />
           <ul className={styles.sitesList}>
             <li>
@@ -114,18 +117,17 @@ export const HowToMakeOrder = () => {
         </li>
         <li>
           <Typography styleVariant="textPrimary">
-            4. Wyślij do nas na{" "}
+            {t("makeOrder:makeOrder-4-1")}{" "}
             <a href="mailto: wilando.art@gmail.com" className={styles.mail}>
               wilando.art@gmail.com
             </a>{" "}
-            wybraną grafikę, zdjęcje ściany, napisz wymiary ściany, wielkość
-            druku oraz miejscowość
+            {t("makeOrder:makeOrder-4-2")}
           </Typography>
         </li>
         <li>
           <Typography
             styleVariant="textPrimary"
-            children="5. Po otrzymaniu wiadomości nasi pracownicy skontaktują się z Tobą już z wyceną projektu"
+            children={t("makeOrder:makeOrder-5")}
           />
         </li>
       </ul>
