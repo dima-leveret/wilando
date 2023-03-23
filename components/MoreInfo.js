@@ -30,7 +30,7 @@ export const MoreInfo = () => {
           target="_blank"
         >
           Instagram
-        </a>{" "}
+        </a>
       </Typography>
     </div>
   );
