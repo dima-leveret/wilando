@@ -28,7 +28,7 @@ function Galery({ images, nextCursor }) {
 
 export default Galery;
 
-export const getServerSideProps = async ({ locale }) => {
+export async function getServerSideProps({ locale }) {
   const results = await search({
     max_results: 9,
   });
@@ -44,4 +44,4 @@ export const getServerSideProps = async ({ locale }) => {
       ...(await serverSideTranslations(locale, ["pageTitle"])),
     },
   };
-};
+}

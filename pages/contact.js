@@ -27,10 +27,10 @@ function Contact() {
 
 export default Contact;
 
-export const getStaticProps = async ({ locale }) => {
+export async function getStaticProps({ locale }) {
   return {
     props: {
       ...(await serverSideTranslations(locale, ["pageTitle"])),
     },
   };
-};
+}

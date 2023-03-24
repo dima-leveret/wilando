@@ -69,7 +69,7 @@ export default function Home() {
   );
 }
 
-export const getServerSideProps = async ({ locale }) => {
+export async function getServerSideProps({ locale }) {
   return {
     props: {
       ...(await serverSideTranslations(locale, [
@@ -82,4 +82,4 @@ export const getServerSideProps = async ({ locale }) => {
       ])),
     },
   };
-};
+}

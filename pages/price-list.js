@@ -81,10 +81,10 @@ function PriceList() {
 
 export default PriceList;
 
-export const getStaticProps = async ({ locale }) => {
+export async function getStaticProps({ locale }) {
   return {
     props: {
       ...(await serverSideTranslations(locale, ["pageTitle"])),
     },
   };
-};
+}
