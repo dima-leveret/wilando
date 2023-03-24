@@ -4,10 +4,10 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import disableScroll from "disable-scroll";
 import { useState } from "react";
 import { LogoIcon } from "../../assets/Icons";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "react-i18next";
 
 export const Menu = ({ displayTopLine }) => {
-  const { t } = useTranslation("pageTitle");
+  const { t } = useTranslation("translation");
 
   const [burgerMenu, setBurgerMenu] = useState(false);
 

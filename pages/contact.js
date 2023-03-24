@@ -5,11 +5,11 @@ import GoogleMapIframe from "../components/GoogleMapIframe";
 import styles from "../styles/pages/Kontakt.module.css";
 import { Typography } from "../components/Typography";
 import Layout from "../components/Layout";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useTranslation } from "next-i18next";
+// import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "react-i18next";
 
 function Contact() {
-  const { t } = useTranslation("pageTitle");
+  const { t } = useTranslation("translation");
   return (
     <Layout>
       <HeadComponent title="Wilando | Contact" />
@@ -27,10 +27,10 @@ function Contact() {
 
 export default Contact;
 
-export async function getStaticProps({ locale }) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ["pageTitle"])),
-    },
-  };
-}
+// export async function getStaticProps({ locale }) {
+//   return {
+//     props: {
+//       ...(await serverSideTranslations(locale, ["pageTitle"])),
+//     },
+//   };
+// }

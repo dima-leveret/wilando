@@ -11,10 +11,10 @@ import { GiBrickWall } from "react-icons/gi";
 import { MdWallpaper } from "react-icons/md";
 import { TfiGallery } from "react-icons/tfi";
 import Link from "next/link";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "react-i18next";
 
 const Slider = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation("translation");
 
   return (
     <div className={styles.slider}>
@@ -34,13 +34,13 @@ const Slider = () => {
             <div className={styles.slideContainer}>
               <Typography
                 styleVariant="headingLarge"
-                markedFragment={t("slider:slider-title-1-1")}
-                children={t("slider:slider-title-1-2")}
+                markedFragment={t("slider-title-1-1")}
+                children={t("slider-title-1-2")}
                 heading
               />
               <Typography
                 styleVariant="textPrimary"
-                children={t("slider:slider-text-1")}
+                children={t("slider-text-1")}
               />
             </div>
           </div>
@@ -51,13 +51,13 @@ const Slider = () => {
             <div className={styles.slideContainer}>
               <Typography
                 styleVariant="headingLarge"
-                markedFragment={t("slider:slider-title-2-1")}
-                children={t("slider:slider-title-2-2")}
+                markedFragment={t("slider-title-2-1")}
+                children={t("slider-title-2-2")}
                 heading
               />
               <Typography
                 styleVariant="textPrimary"
-                children={t("slider:slider-text-2")}
+                children={t("slider-text-2")}
               />
             </div>
           </div>
@@ -68,17 +68,17 @@ const Slider = () => {
             <div className={styles.slideContainer}>
               <Typography
                 styleVariant="headingLarge"
-                markedFragment={t("slider:slider-title-3-1")}
-                children={t("slider:slider-title-3-2")}
+                markedFragment={t("slider-title-3-1")}
+                children={t("slider-title-3-2")}
                 heading
               />
               <div className={styles.textAndBtn}>
                 <Typography
                   styleVariant="textPrimary"
-                  children={t("slider:slider-text-3")}
+                  children={t("slider-text-3")}
                 />
                 <Link href="/gallery">
-                  <a>{t("slider:slider-btn-text")}</a>
+                  <a>{t("slider-btn-text")}</a>
                 </Link>
               </div>
             </div>

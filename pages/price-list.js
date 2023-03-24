@@ -4,11 +4,11 @@ import { IoIosArrowForward } from "react-icons/io";
 import { MoreInfo } from "../components/MoreInfo";
 import { Typography } from "../components/Typography";
 import Layout from "../components/Layout";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useTranslation } from "next-i18next";
+// import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "react-i18next";
 
 function PriceList() {
-  const { t } = useTranslation("pageTitle");
+  const { t } = useTranslation("translation");
   return (
     <Layout>
       <HeadComponent title="Wilando | Price list" />
@@ -81,10 +81,10 @@ function PriceList() {
 
 export default PriceList;
 
-export async function getStaticProps({ locale }) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ["pageTitle"])),
-    },
-  };
-}
+// export async function getStaticProps({ locale }) {
+//   return {
+//     props: {
+//       ...(await serverSideTranslations(locale, ["pageTitle"])),
+//     },
+//   };
+// }

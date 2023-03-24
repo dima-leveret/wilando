@@ -5,11 +5,11 @@ import { Typography } from "../components/Typography";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { BsHouseDoor } from "react-icons/bs";
 import { FaRegBuilding } from "react-icons/fa";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useTranslation } from "next-i18next";
+// import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "react-i18next";
 
 function ForWhom() {
-  const { t } = useTranslation("pageTitle");
+  const { t } = useTranslation("translation");
 
   return (
     <Layout>
@@ -100,10 +100,10 @@ function ForWhom() {
 
 export default ForWhom;
 
-export async function getStaticProps({ locale }) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ["pageTitle"])),
-    },
-  };
-}
+// export async function getStaticProps({ locale }) {
+//   return {
+//     props: {
+//       ...(await serverSideTranslations(locale, ["pageTitle"])),
+//     },
+//   };
+// }

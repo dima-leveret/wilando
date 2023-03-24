@@ -1,12 +1,14 @@
 import styles from "../../styles/Components/Header.module.css";
 import { SocialLinks } from "../SocialLinks";
+import { useTranslation } from "react-i18next";
 import { useRouter } from "next/router";
 
 export const TopLine = () => {
-  const { locales, locale, push } = useRouter();
+  const { i18n } = useTranslation();
+  const { locales } = useRouter();
 
   const handleClick = (l) => {
-    push("/", undefined, { locale: l });
+    i18n.changeLanguage(l);
   };
 
   return (

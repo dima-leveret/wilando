@@ -7,19 +7,16 @@ import Link from "next/link";
 import { MoreInfo } from "../components/MoreInfo";
 import { Typography } from "../components/Typography";
 import Layout from "../components/Layout";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useTranslation } from "next-i18next";
+// import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "react-i18next";
 
 export default function Home() {
-  const { t } = useTranslation();
+  const { t } = useTranslation("translation");
   return (
     <Layout>
       <HeadComponent title="Wilando" />
 
-      <Typography
-        styleVariant="pageTitle"
-        children={t("pageTitle:page-title-index")}
-      />
+      <Typography styleVariant="pageTitle" children={t("page-title-index")} />
 
       <Slider />
 
@@ -28,23 +25,17 @@ export default function Home() {
           <Typography
             styleVariant="headingPrimary"
             heading
-            markedFragment={t("homePage:home-greatings-1")}
-            children={t("homePage:home-greatings-2")}
+            markedFragment={t("home-greatings-1")}
+            children={t("home-greatings-2")}
           />
-          <Typography
-            styleVariant="textPrimary"
-            children={t("homePage:home-text-1")}
-          />
+          <Typography styleVariant="textPrimary" children={t("home-text-1")} />
           <Typography
             heading
-            markedFragment={t("homePage:home-title-1")}
+            markedFragment={t("home-title-1")}
             styleVariant="headingPrimary"
-            children={t("homePage:home-title-2")}
+            children={t("home-title-2")}
           />
-          <Typography
-            styleVariant="textPrimary"
-            children={t("homePage:home-text-2")}
-          />
+          <Typography styleVariant="textPrimary" children={t("home-text-2")} />
 
           <Advantages />
           <HowToMakeOrder />
@@ -52,11 +43,11 @@ export default function Home() {
           <Typography
             heading
             styleVariant="headingPrimary"
-            markedFragment={t("homePage:home-title-3")}
-            children={t("homePage:home-title-4")}
+            markedFragment={t("home-title-3")}
+            children={t("home-title-4")}
           />
           <Typography styleVariant="textPrimary">
-            {t("homePage:home-text-3")}{" "}
+            {t("home-text-3")}{" "}
             <Link href="/frequently-asked-questions">
               <a className={styles.linkToFAQ}>FAQ</a>
             </Link>
@@ -69,17 +60,17 @@ export default function Home() {
   );
 }
 
-export async function getStaticProps({ locale }) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, [
-        "pageTitle",
-        "homePage",
-        "advantages",
-        "makeOrder",
-        "slider",
-        "moreInfo",
-      ])),
-    },
-  };
-}
+// export async function getStaticProps({ locale }) {
+//   return {
+//     props: {
+//       ...(await serverSideTranslations(locale, [
+//         "pageTitle",
+//         "homePage",
+//         "advantages",
+//         "makeOrder",
+//         "slider",
+//         "moreInfo",
+//       ])),
+//     },
+//   };
+// }
