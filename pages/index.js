@@ -16,7 +16,7 @@ export default function Home() {
     <Layout>
       <HeadComponent title="Wilando" />
 
-      <Typography styleVariant="pageTitle" children={t("page-title-index")} />
+      {/* <Typography styleVariant="pageTitle" children={t("page-title-index")} /> */}
 
       <Slider />
 

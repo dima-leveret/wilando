@@ -1,14 +1,13 @@
 import styles from "../../styles/Components/Header.module.css";
 import { SocialLinks } from "../SocialLinks";
 import { useTranslation } from "react-i18next";
-import { useRouter } from "next/router";
 
 export const TopLine = () => {
   const { i18n } = useTranslation();
-  const { locales } = useRouter();
 
   const handleClick = (l) => {
     i18n.changeLanguage(l);
+    console.log(l);
   };
 
   return (
@@ -22,15 +21,12 @@ export const TopLine = () => {
       <SocialLinks />
 
       <div className={styles.lngBtnContainer}>
-        {locales.map((l) => (
-          <button
-            className={styles.lngBtn}
-            onClick={() => handleClick(l)}
-            key={l}
-          >
-            {l}
-          </button>
-        ))}
+        <button className={styles.lngBtn} onClick={() => handleClick("pl")}>
+          pl
+        </button>
+        <button className={styles.lngBtn} onClick={() => handleClick("ua")}>
+          ua
+        </button>
       </div>
     </div>
   );

@@ -11,6 +11,7 @@
     "disable-scroll": "^0.6.0",
     "emailjs-com": "^3.2.0",
     "i18next": "^22.4.11",
+    "i18next-browser-languagedetector": "^7.0.1",
     "next": "^12.0.8",
     "next-i18next": "^13.2.2",
     "react": "17.0.2",
