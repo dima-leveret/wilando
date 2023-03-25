@@ -4,13 +4,14 @@ import styles from "../styles/Components/Gallery.module.css";
 import { Typography } from "./Typography";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
-
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 const CloudinaryGalery = ({
   images: defaultImages,
   nextCursor: defaultNextCursor,
 }) => {
+  const { t } = useTranslation("translation");
   const [images, setImages] = useState(defaultImages);
   const [nextCursor, setNextCursor] = useState(defaultNextCursor);
 
@@ -69,7 +70,8 @@ const CloudinaryGalery = ({
   return (
     <>
       <div
-        className={isFullScreen ? styles.galleryActive : styles.galleryHidden}>
+        className={isFullScreen ? styles.galleryActive : styles.galleryHidden}
+      >
         <ImageGallery
           useBrowserFullscreen={false}
           ref={imagesGalleryProps}
@@ -84,7 +86,8 @@ const CloudinaryGalery = ({
             <div
               key={image.id}
               className={styles.imgContainer}
-              onClick={() => showFullScreen(image)}>
+              onClick={() => showFullScreen(image)}
+            >
               <Image
                 alt={image.title}
                 src={image.original}
@@ -98,11 +101,11 @@ const CloudinaryGalery = ({
       </div>
       {nextCursor ? (
         <button className={styles.loadMoreBtn} onClick={hadleLoadMore}>
-          Pokaż więcej
+          {t("gallery-btn")}
         </button>
       ) : (
         <Typography styleVariant="textPrimary">
-          To są wszystkie zdjęcia które obecnie mamy 😃
+          {t("gallery-all-images")} 😃
         </Typography>
       )}
     </>

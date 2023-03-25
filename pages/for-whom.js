@@ -1,64 +1,71 @@
 import HeadComponent from "../components/HeadComponent";
+import Layout from "../components/Layout";
 import styles from "../styles/pages/For-whom.module.css";
 import { Typography } from "../components/Typography";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { BsHouseDoor } from "react-icons/bs";
 import { FaRegBuilding } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 function ForWhom() {
+  const { t } = useTranslation("translation");
+
   return (
-    <>
+    <Layout>
       <HeadComponent title="Wilando | Fro whom" />
-      <Typography styleVariant="pageTitle" children="Dla kogo" />
+      <Typography
+        styleVariant="pageTitle"
+        children={t("page-title-for-whom")}
+      />
 
       <Typography
         heading
         styleVariant="headingPrimary"
-        markedFragment="Stwórz "
-        children="niezapomnianą atmosferę która zaskoczy twoich gości!"
+        markedFragment={t("for-whom-title-1-1")}
+        children={t("for-whom-title-1-2")}
       />
-      <Typography
-        styleVariant="textPrimary"
-        children="Pionowy druk jest nowoczesną możliwością dekorowania ścian i innych powierzchni za pomocą pionowej drukarki."
-      />
+      <Typography styleVariant="textPrimary" children={t("for-whom-text-1")} />
 
       <Typography
         styleVariant="headingPrimary"
         heading
-        markedFragment="Obowiązujące "
-        children="branże:"
+        markedFragment={t("for-whom-title-2-1")}
+        children={t("for-whom-title-2-2")}
       />
       <ul className={styles.industriesList}>
         <li>
           <AiOutlineArrowRight className={styles.liIcon} />
-          <Typography styleVariant="textPrimary" children="Dekoracja domowa" />
-        </li>
-        <li>
-          <AiOutlineArrowRight className={styles.liIcon} />
           <Typography
             styleVariant="textPrimary"
-            children="Przemysł reklamowy"
+            children={t("for-whom-li-1")}
           />
         </li>
         <li>
           <AiOutlineArrowRight className={styles.liIcon} />
           <Typography
             styleVariant="textPrimary"
-            children="Przemysł kulturalny i edukacyjny"
+            children={t("for-whom-li-2")}
           />
         </li>
         <li>
           <AiOutlineArrowRight className={styles.liIcon} />
           <Typography
             styleVariant="textPrimary"
-            children="Dekoracja hoteli i restauracji"
+            children={t("for-whom-li-3")}
           />
         </li>
         <li>
           <AiOutlineArrowRight className={styles.liIcon} />
           <Typography
             styleVariant="textPrimary"
-            children="Sztuka ścienna, muzea itp."
+            children={t("for-whom-li-4")}
+          />
+        </li>
+        <li>
+          <AiOutlineArrowRight className={styles.liIcon} />
+          <Typography
+            styleVariant="textPrimary"
+            children={t("for-whom-li-5")}
           />
         </li>
       </ul>
@@ -68,14 +75,14 @@ function ForWhom() {
           <BsHouseDoor className={styles.advantageIcon} />
           <Typography
             styleVariant="textPrimary"
-            children="Dekoracja domu nigdy nie była tak prosta! Uzupełnij puste ściany portretem rodzinnym, znanym na świecie obrazem lub inną grafiką na swój gust!"
+            children={t("for-whom-text-2")}
           />
         </div>
         <div className={styles.advantage}>
           <FaRegBuilding className={styles.advantageIcon} />
           <Typography
             styleVariant="textPrimary"
-            children="Wyróżnij swoje biuro, restauracje, kawiarnie niezapomnianą grafiką która przyciągnie uwagę klientów!"
+            children={t("for-whom-text-3")}
           />
         </div>
       </div>
@@ -83,10 +90,10 @@ function ForWhom() {
       <Typography
         heading
         styleVariant="headingPrimary"
-        markedFragment="Wszystko "
-        children="zrobisz bez żadnych przygotowań podłoża!"
+        markedFragment={t("for-whom-title-3-1")}
+        children={t("for-whom-title-3-2")}
       />
-    </>
+    </Layout>
   );
 }
 

@@ -1,12 +1,9 @@
-import Layout from '../components/Layout';
-import '../styles/globals.css';
+// import { appWithTranslation } from "next-i18next";
+import i18n from "../i18n";
+import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
-  return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
-  );
+  return <Component {...pageProps} />;
 }
 
-export default MyApp
+export default MyApp;

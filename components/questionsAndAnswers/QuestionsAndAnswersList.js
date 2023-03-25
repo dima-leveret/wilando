@@ -1,9 +1,13 @@
 import QuestionsAndAnswersItem from "./QuestionsAndAnswersItem";
 import styles from "../../styles/Components/QuestionsAndAnswersList.module.css";
-import questionsAndAnswers from "./questionsAndAnswers.json";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const QuestionsAndAnswersList = () => {
+  const { t } = useTranslation("translation");
+
+  const faq = t("faq", { returnObjects: true });
+
   const [selectedId, setSelectedId] = useState(null);
 
   const handleOnItemClick = (itemId) => {
@@ -15,7 +19,7 @@ const QuestionsAndAnswersList = () => {
 
   return (
     <div className={styles.listConatiner}>
-      {questionsAndAnswers.map((data) => (
+      {faq.map((data) => (
         <QuestionsAndAnswersItem
           key={data.id}
           question={data.question}

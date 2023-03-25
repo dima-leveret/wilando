@@ -1,9 +1,11 @@
 import styles from "../styles/Components/BasicInfo.module.css";
-import { GiSmartphone } from "react-icons/gi";
+// import { GiSmartphone } from "react-icons/gi";
 import { IoLocationOutline } from "react-icons/io5";
 import { BsEnvelope, BsClock } from "react-icons/bs";
+import { useTranslation } from "react-i18next";
 
 const BasicInfo = () => {
+  const { t } = useTranslation("translation");
   return (
     <div className={styles.basicInfoContainer}>
       <div className={styles.basicInfo}>
@@ -21,7 +23,7 @@ const BasicInfo = () => {
         <div className={styles.infoItem}>
           <IoLocationOutline className={styles.infoItemIcon} />
           <div className={styles.infoText}>
-            <span>Adres</span>
+            <span>{t("contact-addres")}</span>
             <p>Kopanina 54/56</p>
             <p>60-105 Poznań</p>
           </div>
@@ -30,7 +32,7 @@ const BasicInfo = () => {
         <div className={styles.infoItem}>
           <BsEnvelope className={styles.infoItemIcon} />
           <div className={styles.infoText}>
-            <span>Email</span>
+            <span>{t("contact-email")}</span>
             <a href="mailto: wilando.art@gmail.com" className={styles.mail}>
               wilando.art@gmail.com
             </a>
@@ -40,8 +42,8 @@ const BasicInfo = () => {
         <div className={styles.infoItem}>
           <BsClock className={styles.infoItemIcon} />
           <div className={styles.infoText}>
-            <span>Godziny pracy biura</span>
-            <p>Pon-Sub: 8:00-20:00</p>
+            <span>{t("contact-hours")}</span>
+            <p>{t("contact-work-hours")}</p>
           </div>
         </div>
       </div>

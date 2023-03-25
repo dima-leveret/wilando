@@ -11,8 +11,11 @@ import { GiBrickWall } from "react-icons/gi";
 import { MdWallpaper } from "react-icons/md";
 import { TfiGallery } from "react-icons/tfi";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 const Slider = () => {
+  const { t } = useTranslation("translation");
+
   return (
     <div className={styles.slider}>
       <Swiper
@@ -31,13 +34,13 @@ const Slider = () => {
             <div className={styles.slideContainer}>
               <Typography
                 styleVariant="headingLarge"
-                markedFragment="Dekoracja"
-                children="ścian"
+                markedFragment={t("slider-title-1-1")}
+                children={t("slider-title-1-2")}
                 heading
               />
               <Typography
                 styleVariant="textPrimary"
-                children="SZYBKO. JAKOŚCIOWO. BEZ PRZYGOTOWAŃ"
+                children={t("slider-text-1")}
               />
             </div>
           </div>
@@ -48,13 +51,13 @@ const Slider = () => {
             <div className={styles.slideContainer}>
               <Typography
                 styleVariant="headingLarge"
-                markedFragment="Druk"
-                children="na płótnie"
+                markedFragment={t("slider-title-2-1")}
+                children={t("slider-title-2-2")}
                 heading
               />
               <Typography
                 styleVariant="textPrimary"
-                children="STWÓRZ WŁASNY OBRAZ NA PŁÓTNIE"
+                children={t("slider-text-2")}
               />
             </div>
           </div>
@@ -65,17 +68,17 @@ const Slider = () => {
             <div className={styles.slideContainer}>
               <Typography
                 styleVariant="headingLarge"
-                markedFragment="Zobacz"
-                children="naszą galerię"
+                markedFragment={t("slider-title-3-1")}
+                children={t("slider-title-3-2")}
                 heading
               />
               <div className={styles.textAndBtn}>
                 <Typography
                   styleVariant="textPrimary"
-                  children="PRZYKŁADY KTÓRE JUZ ZOSTAŁY ZREALIZOWANE"
+                  children={t("slider-text-3")}
                 />
                 <Link href="/gallery">
-                  <a>Przejść do galerii</a>
+                  <a>{t("slider-btn-text")}</a>
                 </Link>
               </div>
             </div>

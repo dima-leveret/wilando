@@ -1,0 +1,134 @@
+{
+    "page-title-index": "Główna",
+    "page-title-contact": "Kontakt",
+    "page-title-for-whom": "Dla kogo",
+    "page-title-faq": "FAQ",
+    "page-title-gallery": "Galeria",
+    "page-title-price-list": "Cennik",
+    "page-title-404": "404",
+
+    "home-greatings-1": "Witamy",
+    "home-greatings-2": "w świece unikalnych technologij dekoru!",
+    "home-text-1": "Chcesz dodać w swoje życie barw czy inspiracji? Wyróżnić swoje mieszkanie lub miejsce pracy? Zapraszamy do współpracy z naszym zespołem Wilando. Prezentujemy Wam nową możliwość dekorowania ścian i innych powierzchni za pomocą pionowej drukarki. Teraz logo Waszej firmy, zdjęcie rodzinne, pejzaż lub znany na całym świece obraz może ozdobić ściany Waszego domu, biura, restauracji czy innego pomieszczenia. Jedynym ograniczeniem jest twoja własna wyobrażnia.",
+    "home-title-1": "W jaki",
+    "home-title-2": "sposób to działa?",
+    "home-text-2": "Dla druku używamy pionową drukarkę z możliwością drukowania do 190 cm wysokości, przy czym szerokość wydruku nie jest ograniczona.",
+    "home-title-3": "Masz",
+    "home-title-4": "pytania?",
+    "home-text-3": "Gdy jeszcze masz pytania sprawdź",
+
+    "advantages-title-1": "Kluczowe",
+    "advantages-title-2": "zalety takiego sposobu dekorowania:",
+    "advantages-subtitle-1": "Jakość druku",
+    "advantages-text-1": "Jesteśmy w stanie drukować obrazy rozdzielczością 720x2880 dpi i 1440x2880 dpi. Dla tego wydruk wygląda niezwykle realistycznie i dokładnie",
+    "advantages-subtitle-2": "Prędkość",
+    "advantages-text-2": "Szybkość druku osiąga 1 m2 na godzinę w zależności od złożoności obrazu",
+    "advantages-subtitle-3": "Typ podłoża",
+    "advantages-text-3": "Druk wykonuje się prosto na ścianę lub inną powierzchnię pionową bez konieczności wcześniejszego przygotowania podłoża. Typy podłoża: tynk, farba, cegła, drewno, plastik, kamień, beton, tapety",
+    "advantages-subtitle-4": "Ekologiczne atramenty UV",
+    "advantages-text-4": "Używane tusze są ekologiczne, przyjazne dla ludzi, zwierzęta oraz środowiska. Wysychają błyskawicznie, nie pozostawiają smug ani zapachu",
+    "advantages-subtitle-5": "Trwałość druku",
+    "advantages-text-5": "Grafika jest drukowana atramentami UV i od razu utwardzana światłem UV. Co gwarantuję wysoką trwałość druku i odporność na warunki atmosferyczne",
+    "advantages-subtitle-6": "Pielęgnacja druku",
+    "advantages-text-6": "Atrament jest odporny na wilgoć. Nadruki można przecierać wilgotną ściereczką",
+
+    "makeOrder-title-1": "Jak",
+    "makeOrder-title-2": "złożyć zamówienie?",
+    "makeOrder-1": "1. Wybierz miejsce druku",
+    "makeOrder-2": "2. Zrób zdjęcie miejsca druku razem z podłogą",
+    "makeOrder-3": "3. Wybierz grafikę druku. Obraz może być dowolny na Wasze życzenie. Możesz szukać grafiki na serwisach z grafiką:",
+    "makeOrder-4-1": "4. Wyślij do nas na",
+    "makeOrder-4-2": "wybraną grafikę, zdjęcje ściany, napisz wymiary ściany, wielkość druku oraz miejscowość",
+    "makeOrder-5": "5. Po otrzymaniu wiadomości nasi pracownicy skontaktują się z Tobą już z wyceną projektu",
+
+    "moreInfo-text-1": "Po więcej szczegółów zapraszamy do kontaktu przez nasz",
+    "moreInfo-text-2": "formularz kontaktowy",
+    "moreInfo-text-3": "oraz przez nasze strony na",
+    "moreInfo-text-4": "lub",
+
+    "slider-title-1-1": "Dekoracja",
+    "slider-title-1-2": "ścian",
+    "slider-text-1": "SZYBKO. JAKOŚCIOWO. BEZ PRZYGOTOWAŃ",
+    "slider-title-2-1": "Druk",
+    "slider-title-2-2": "na płótnie",
+    "slider-text-2": "STWÓRZ WŁASNY OBRAZ NA PŁÓTNIE",
+    "slider-title-3-1": "Zobacz",
+    "slider-title-3-2": "naszą galerię",
+    "slider-text-3": "PRZYKŁADY KTÓRE JUZ ZOSTAŁY ZREALIZOWANE",
+    "slider-btn-text": "Przejść do galerii",
+
+    "gallery-title": "Zainspiruj się naszymi drukami! Każdy obraz może być nadrukowany u Ciebie!",
+    "gallery-btn": "Pokaż więcej",
+    "gallery-all-images": "To są wszystkie zdjęcia które obecnie mamy",
+
+    "for-whom-title-1-1": "Stwórz",
+    "for-whom-title-1-2": "niezapomnianą atmosferę która zaskoczy twoich gości!",
+    "for-whom-text-1": "Pionowy druk jest nowoczesną możliwością dekorowania ścian i innych powierzchni za pomocą pionowej drukarki.",
+    "for-whom-title-2-1": "Obowiązujące",
+    "for-whom-title-2-2": "branże:",
+    "for-whom-li-1": "Dekoracja domowa", 
+    "for-whom-li-2": "Przemysł reklamowy", 
+    "for-whom-li-3": "Przemysł kulturalny i edukacyjny", 
+    "for-whom-li-4": "Dekoracja hoteli i restauracji", 
+    "for-whom-li-5": "Sztuka ścienna, muzea itp.",
+    "for-whom-text-2": "Dekoracja domu nigdy nie była tak prosta! Uzupełnij puste ściany portretem rodzinnym, znanym na świecie obrazem lub inną grafiką na swój gust!",
+    "for-whom-text-3": "Wyróżnij swoje biuro, restauracje, kawiarnie niezapomnianą grafiką która przyciągnie uwagę klientów!",
+    "for-whom-title-3-1": "Wszystko ",
+    "for-whom-title-3-2": "zrobisz bez żadnych przygotowań podłoża!",
+
+    "faq": [
+        {
+            "id": 1,
+            "question": "Rozmiary druku?",
+            "answer": "Maksymalna wysokość druku wynosi 190 cm. Szerokość druku prawie bez ograniczeń. Odległość od ścian po lewej stronie wynosi 10 cm oraz po prawej stronie to 40 cm. Odstęp od podłogi wynosi 40 cm oraz 28 cm od sufitu."
+        },
+        {
+            "id": 2,
+            "question": "Czy potrzebne specjalne przygotowania przed drukiem?",
+            "answer": "Nie. Jesteśmy w stanie drukować prawie na każdej powierzchni a wiec nie ma potrzeby przygotowywać ścianę przed drukiem."
+        },
+        {
+            "id": 3,
+            "question": "Jaką trwałość ma wydrukowany obrazek?",
+            "answer": "Na każdy druk dajemy gwarancje trwałości 10 lat wewnątrz pomieszczeń. Gwarancja nie dotyczy uszkodzeń mechanicznych."
+        },
+        {
+            "id": 4,
+            "question": "Jaką grafikę mogę wybrać?",
+            "answer": "Prawie każdą. Jesteś my w stanie nadrukować dowolną grafikę. Pod warunkiem że wybrana grafika będzie w miarę dobrej jakości. Dla sprawdzenia grafiki prosimy o wysłanie pliku na adres meilowy wilando.art@gmail.com. Nasi pracownicy sprawdzą i doradzą odnośnie wybranej grafiki."
+        },
+        {
+            "id": 5,
+            "question": "Ile trwa druk na miejscu?",
+            "answer": "Szybkość druku to 45 minut na 1 m2 + około godziny przygotowanie sprzętu (ze wniesieniem)."
+        },
+        {
+            "id": 6,
+            "question": "Jaką farbą drukowane?",
+            "answer": "Dla druku wykorzystujemy specjalne UV-atramenty które są ekologiczne, nietoksyczne oraz bezwonne po utwardzaniu. Bezpieczne dla ludzi oraz zwierząt."
+        }
+    ],
+
+    "price-list-text-1": "Cena każdego projektu wyceniana jest indywidualnie w zależności od wielu czynników takich jak rozmiar grafiki czy miejscowość itp.",
+    "price-list-text-2": "Szacunkowy koszt druku do 1m2 wynosi 350 zł netto + VAT. Cena jest wyliczona dla powiatu poznańskiego. Dla tego dla wyceny prosimy o podanie miejscowości gdzie ma być wykonany druk.",
+    "price-list-title-1": "Dla wyceny",
+    "price-list-title-2": "potrzebujemy:",
+    "price-list-li-1": "Wybraną grafikę (gdy już masz)",
+    "price-list-li-2": "Zdjęcie ściany wraz z podłogą",
+    "price-list-li-3": "Wymiary ściany (szerokość i wysokość od podłogi do sufitu)",
+    "price-list-li-4": "Miejscowość",
+    "price-list-li-5": "Jakiej wielkości ma być druk",
+
+    "contact-addres": "Adres",
+    "contact-email": "Email",
+    "contact-hours": "Godziny pracy biura",
+    "contact-work-hours": "Pon-Sub: 8:00-20:00",
+    "contact-name": "Imię",
+    "contact-phone": "Telefon",
+    "contact-message": "Wiadomość",
+    "contact-btn": "Wyślij",
+
+    "footer-about-us": "o nas",
+    "footer-about-us-text": "Druk ścienny to nowa technologia która pozwala drukować dokładne i wysokiej jakości obrazy na prawie każdej pionowej powierzchni wewnątrz lub zewnątrz pomieszczeń. Nasza drukarka pozwala drukować obrazy do 190 cm wysokości bez limitu szerokości. Wyjątkowość drukarki polega również na drukowaniu ekologicznymi, przyjaznymi dla środowiska i szybkoschnąncymi atramentami UV. Dzięki temu tusz wysycha błyskawicznie, nie pozostawiając smug ani zapachu.",
+    "footer-contact": "kontakt"
+}

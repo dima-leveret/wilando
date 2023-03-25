@@ -6,13 +6,16 @@ import { HowToMakeOrder } from "../components/HowToMakeOrder";
 import Link from "next/link";
 import { MoreInfo } from "../components/MoreInfo";
 import { Typography } from "../components/Typography";
+import Layout from "../components/Layout";
+import { useTranslation } from "react-i18next";
 
 export default function Home() {
+  const { t } = useTranslation("translation");
   return (
-    <>
+    <Layout>
       <HeadComponent title="Wilando" />
 
-      <Typography styleVariant="pageTitle" children="Główna" />
+      <Typography styleVariant="pageTitle" children={t("page-title-index")} />
 
       <Slider />
 
@@ -21,26 +24,17 @@ export default function Home() {
           <Typography
             styleVariant="headingPrimary"
             heading
-            markedFragment="Witamy"
-            children="w świece unikalnych
-            technologij dekoru!"
+            markedFragment={t("home-greatings-1")}
+            children={t("home-greatings-2")}
           />
-          <Typography
-            styleVariant="textPrimary"
-            children="Chcesz dodać w swoje życie barw czy inspiracji? Wyróżnić swoje mieszkanie lub miejsce pracy? Zapraszamy do współpracy z naszym
-            zespołem Wilando. Prezentujemy Wam nową możliwość dekorowania ścian i innych powierzchni za pomocą pionowej drukarki. Teraz logo Waszej
-            firmy, zdjęcie rodzinne, pejzaż lub znany na całym świece obraz może ozdobić ściany Waszego domu, biura, restauracji czy innego pomieszczenia. Jedynym ograniczeniem jest twoja własna wyobrażnia."
-          />
+          <Typography styleVariant="textPrimary" children={t("home-text-1")} />
           <Typography
             heading
-            markedFragment="W jaki"
+            markedFragment={t("home-title-1")}
             styleVariant="headingPrimary"
-            children="sposób to działa?"
+            children={t("home-title-2")}
           />
-          <Typography
-            styleVariant="textPrimary"
-            children="Dla druku używamy pionową drukarkę z możliwością drukowania do 190 cm wysokości, przy czym szerokość wydruku nie jest ograniczona."
-          />
+          <Typography styleVariant="textPrimary" children={t("home-text-2")} />
 
           <Advantages />
           <HowToMakeOrder />
@@ -48,11 +42,11 @@ export default function Home() {
           <Typography
             heading
             styleVariant="headingPrimary"
-            markedFragment="Masz "
-            children="pytania?"
+            markedFragment={t("home-title-3")}
+            children={t("home-title-4")}
           />
           <Typography styleVariant="textPrimary">
-            Gdy jeszcze masz pytania sprawdź{" "}
+            {t("home-text-3")}{" "}
             <Link href="/frequently-asked-questions">
               <a className={styles.linkToFAQ}>FAQ</a>
             </Link>
@@ -61,6 +55,6 @@ export default function Home() {
         </div>
       </div>
       <MoreInfo />
-    </>
+    </Layout>
   );
 }

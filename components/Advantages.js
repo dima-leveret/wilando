@@ -4,75 +4,78 @@ import { TbWall, TbFlower, TbClock2 } from "react-icons/tb";
 import { GoEye } from "react-icons/go";
 import { Typography } from "./Typography";
 import styles from "../styles/Components/Advantages.module.css";
+import { useTranslation } from "react-i18next";
 
 export const Advantages = () => {
+  const { t } = useTranslation("translation");
+
   return (
     <>
       <Typography
         styleVariant="headingPrimary"
         heading
-        markedFragment="Kluczowe"
-        children="zalety takiego sposobu dekorowania:"
+        markedFragment={t("advantages-title-1")}
+        children={t("advantages-title-2")}
       />
       <div className={styles.advantagesConatiner}>
         <div className={styles.advantage}>
           <div className={styles.advantageTitle}>
             <GiMountains className={styles.advantageIcon} />
-            <span>Jakość druku</span>
+            <span>{t("advantages-subtitle-1")}</span>
           </div>
           <Typography
             styleVariant="textPrimary"
-            children="Jesteśmy w stanie drukować obrazy rozdzielczością 720x2880 dpi i 1440x2880 dpi. Dla tego wydruk wygląda niezwykle realistycznie i dokładnie"
+            children={t("advantages-text-1")}
           />
         </div>
         <div className={styles.advantage}>
           <div className={styles.advantageTitle}>
             <CgPlayButtonO className={styles.advantageIcon} />
-            <span>Prędkość</span>
+            <span>{t("advantages-subtitle-2")}</span>
           </div>
           <Typography
             styleVariant="textPrimary"
-            children="Szybkość druku osiąga 1 m2 na godzinę w zależności od złożoności obrazu"
+            children={t("advantages-text-2")}
           />
         </div>
         <div className={styles.advantage}>
           <div className={styles.advantageTitle}>
             <TbWall className={styles.advantageIcon} />
-            <span>Typ podłoża</span>
+            <span>{t("advantages-subtitle-3")}</span>
           </div>
           <Typography
             styleVariant="textPrimary"
-            children="Druk wykonuje się prosto na ścianę lub inną powierzchnię pionową bez konieczności wcześniejszego przygotowania podłoża. Typy podłoża: tynk, farba, cegła, drewno, plastik, kamień, beton, tapety"
+            children={t("advantages-text-3")}
           />
         </div>
         <div className={styles.advantage}>
           <div className={styles.advantageTitle}>
             <TbFlower className={styles.advantageIcon} />
-            <span>Ekologiczne atramenty UV</span>
+            <span>{t("advantages-subtitle-4")}</span>
           </div>
           <Typography
             styleVariant="textPrimary"
-            children="Używane tusze są ekologiczne, przyjazne dla ludzi, zwierzęta oraz środowiska. Wysychają błyskawicznie, nie pozostawiają smug ani zapachu"
+            children={t("advantages-text-4")}
           />
         </div>
         <div className={styles.advantage}>
           <div className={styles.advantageTitle}>
             <TbClock2 className={styles.advantageIcon} />
-            <span>Trwałość druku</span>
+            <span>{t("advantages-subtitle-5")}</span>
           </div>
           <Typography
             styleVariant="textPrimary"
-            children="Grafika jest drukowana atramentami UV i od razu utwardzana światłem UV. Co gwarantuję wysoką trwałość druku i odporność na warunki atmosferyczne"
+            children={t("advantages-text-5")}
           />
         </div>
         <div className={styles.advantage}>
           <div className={styles.advantageTitle}>
             <GoEye className={styles.advantageIcon} />
-            <span>Pielęgnacja druku</span>
+            <span>{t("advantages-subtitle-6")}</span>
           </div>
           <Typography
             styleVariant="textPrimary"
-            children="Atrament jest odporny na wilgoć. Nadruki można przecierać wilgotną ściereczką"
+            children={t("advantages-text-6")}
           />
         </div>
       </div>

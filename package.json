@@ -10,9 +10,13 @@
   "dependencies": {
     "disable-scroll": "^0.6.0",
     "emailjs-com": "^3.2.0",
+    "i18next": "^22.4.11",
+    "i18next-browser-languagedetector": "^7.0.1",
     "next": "^12.0.8",
+    "next-i18next": "^13.2.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-i18next": "^12.2.0",
     "react-icons": "^4.6.0",
     "react-image-gallery": "^1.2.7",
     "swiper": "^8.1.4"
