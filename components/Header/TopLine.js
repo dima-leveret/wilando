@@ -1,13 +1,27 @@
 import styles from "../../styles/Components/Header.module.css";
 import { SocialLinks } from "../SocialLinks";
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
+import { useEffect } from "react";
 
 export const TopLine = () => {
+  const [activeLng, setActiveLng] = useState();
+
   const { i18n } = useTranslation();
+
+  const lngs = {
+    pl: { lngName: "pl" },
+    ua: { lngName: "ua" },
+  };
 
   const handleClick = (l) => {
     i18n.changeLanguage(l);
+    setActiveLng(localStorage.getItem("i18nextLng"));
   };
+
+  useEffect(() => {
+    setActiveLng(localStorage.getItem("i18nextLng"));
+  }, []);
 
   return (
     <div className={styles.topLine}>
@@ -20,12 +34,18 @@ export const TopLine = () => {
       <SocialLinks />
 
       <div className={styles.lngBtnContainer}>
-        <button className={styles.lngBtn} onClick={() => handleClick("pl")}>
-          pl
-        </button>
-        <button className={styles.lngBtn} onClick={() => handleClick("ua")}>
-          ua
-        </button>
+        {Object.keys(lngs).map((lng) => (
+          <button
+            className={
+              activeLng === lng ? styles.lngBtnSelected : styles.lngBtn
+            }
+            key={lng}
+            onClick={() => handleClick(lng)}
+            disabled={activeLng === lng}
+          >
+            {lngs[lng].lngName}
+          </button>
+        ))}
       </div>
     </div>
   );

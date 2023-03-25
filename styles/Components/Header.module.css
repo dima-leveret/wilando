@@ -44,6 +44,16 @@
   margin-left: 10px;
 }
 
+.lngBtnSelected {
+  background-color: transparent;
+  line-height: 1;
+  color: #fff;
+  border: none;
+  transition: 0.2s ease-in-out;
+  margin-left: 10px;
+  color: #0ac775;
+}
+
 .lngBtn:hover {
   cursor: pointer;
   transition: 0.2s ease-in-out;
