@@ -3,7 +3,6 @@ import { search, mapImageResources } from "../src/lib/coudinary";
 import CloudinaryGalery from "../components/CloudinaryGallery";
 import { Typography } from "../components/Typography";
 import Layout from "../components/Layout";
-// import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "react-i18next";
 
 function Galery({ images, nextCursor }) {
@@ -15,11 +14,7 @@ function Galery({ images, nextCursor }) {
 
       <Typography styleVariant="pageTitle" children={t("page-title-gallery")} />
 
-      <Typography
-        styleVariant="textPrimary"
-        children="Zainspiruj się naszymi drukami! Każdy obraz może być nadrukowany u
-        Ciebie!"
-      />
+      <Typography styleVariant="textPrimary" children={t("gallery-title")} />
 
       <CloudinaryGalery images={images} nextCursor={nextCursor} />
     </Layout>
@@ -41,7 +36,6 @@ export async function getServerSideProps() {
     props: {
       images,
       nextCursor: nextCursor || null,
-      // ...(await serverSideTranslations(locale, ["pageTitle"])),
     },
   };
 }

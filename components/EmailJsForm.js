@@ -2,15 +2,15 @@ import React, { useRef, useState } from "react";
 import styles from "../styles/Components/EmailJsForm.module.css";
 import emailjs from "emailjs-com";
 import * as FaIcons from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 function EmailJsForm() {
+  const { t } = useTranslation("translation");
   const form = useRef();
   const [status, setStatus] = useState();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    //wilando send form data
 
     emailjs
       .sendForm(
@@ -42,7 +42,7 @@ function EmailJsForm() {
               type="text"
               required
               name="name"
-              placeholder="Name"
+              placeholder={t("contact-name")}
               className={styles.input}
             />
             <FaIcons.FaUser />
@@ -54,7 +54,7 @@ function EmailJsForm() {
               type="email"
               required
               name="email"
-              placeholder="Email"
+              placeholder={t("contact-email")}
               className={styles.input}
             />
             <FaIcons.FaEnvelope />
@@ -65,7 +65,7 @@ function EmailJsForm() {
               id="phone"
               type="tel"
               name="phone"
-              placeholder="Phone"
+              placeholder={t("contact-phone")}
               className={styles.input}
             />
             <FaIcons.FaPhoneAlt />
@@ -75,15 +75,16 @@ function EmailJsForm() {
             <textarea
               id="message"
               type="text"
+              required
               name="message"
-              placeholder="Message"
+              placeholder={t("contact-message")}
               className={styles.textarea}
             />
             <FaIcons.FaPencilAlt className={styles.pencilIcon} />
           </div>
 
           <div className={styles.btnContainer}>
-            <input type="submit" value="Wyślij" className={styles.btn} />
+            <input type="submit" value={t("contact-btn")} className={styles.btn} />
             {!status ? null : <FaIcons.FaCheck className={styles.checkIcon} />}
           </div>
         </form>

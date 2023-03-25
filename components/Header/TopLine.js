@@ -7,7 +7,6 @@ export const TopLine = () => {
 
   const handleClick = (l) => {
     i18n.changeLanguage(l);
-    console.log(l);
   };
 
   return (

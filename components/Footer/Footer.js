@@ -1,33 +1,27 @@
 import { DimaLeveret } from "./DimaLeveret";
 import { SocialLinks } from "../SocialLinks";
 import styles from "../../styles/Components/Footer.module.css";
-import { MdLocationOn, MdPhone, MdEmail } from "react-icons/md";
+import { MdLocationOn, MdEmail } from "react-icons/md";
+import { useTranslation } from "react-i18next";
 
 function Footer() {
+  const { t } = useTranslation("translation");
   return (
     <footer className={styles.footer}>
       <div className={styles.footerContainer}>
         <div className={styles.about}>
-          <p className={styles.title}>o nas</p>
-          <p className={styles.aboutText}>
-            Druk ścienny to nowa technologia która pozwala drukować dokładne i
-            wysokiej jakości obrazy na prawie każdej pionowej powierzchni
-            wewnątrz lub zewnątrz pomieszczeń. Nasza drukarka pozwala drukować
-            obrazy do 190 cm wysokości bez limitu szerokości. Wyjątkowość
-            drukarki polega również na drukowaniu ekologicznymi, przyjaznymi dla
-            środowiska i szybkoschnąncymi atramentami UV. Dzięki temu tusz
-            wysycha błyskawicznie, nie pozostawiając smug ani zapachu.
-          </p>
+          <p className={styles.title}>{t("footer-about-us")}</p>
+          <p className={styles.aboutText}>{t("footer-about-us-text")}</p>
           <SocialLinks />
         </div>
 
         <div className={styles.contactUs}>
-          <p className={styles.title}>kontakt</p>
+          <p className={styles.title}>{t("footer-contact")}</p>
 
           <div className={styles.contactUsItem}>
             <MdLocationOn className={styles.contactUsIcon} />
             <div className={styles.contactUsText}>
-              <span>Adres:</span>
+              <span>{t("contact-addres")}:</span>
               <p>Kopanina 54/56, 60-105, Poznań</p>
             </div>
           </div>
@@ -45,7 +39,7 @@ function Footer() {
           <div className={styles.contactUsItem}>
             <MdEmail className={styles.contactUsIcon} />
             <div className={styles.contactUsText}>
-              <span>Mail:</span>
+              <span>{t("contact-email")}:</span>
               <a href="mailto:wilando.art@gmail.com">wilando.art@gmail.com</a>
             </div>
           </div>

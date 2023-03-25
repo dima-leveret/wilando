@@ -55,5 +55,80 @@
     "slider-title-3-1": "Zobacz",
     "slider-title-3-2": "naszą galerię",
     "slider-text-3": "PRZYKŁADY KTÓRE JUZ ZOSTAŁY ZREALIZOWANE",
-    "slider-btn-text": "Przejść do galerii"
+    "slider-btn-text": "Przejść do galerii",
+
+    "gallery-title": "Zainspiruj się naszymi drukami! Każdy obraz może być nadrukowany u Ciebie!",
+    "gallery-btn": "Pokaż więcej",
+    "gallery-all-images": "To są wszystkie zdjęcia które obecnie mamy",
+
+    "for-whom-title-1-1": "Stwórz",
+    "for-whom-title-1-2": "niezapomnianą atmosferę która zaskoczy twoich gości!",
+    "for-whom-text-1": "Pionowy druk jest nowoczesną możliwością dekorowania ścian i innych powierzchni za pomocą pionowej drukarki.",
+    "for-whom-title-2-1": "Obowiązujące",
+    "for-whom-title-2-2": "branże:",
+    "for-whom-li-1": "Dekoracja domowa", 
+    "for-whom-li-2": "Przemysł reklamowy", 
+    "for-whom-li-3": "Przemysł kulturalny i edukacyjny", 
+    "for-whom-li-4": "Dekoracja hoteli i restauracji", 
+    "for-whom-li-5": "Sztuka ścienna, muzea itp.",
+    "for-whom-text-2": "Dekoracja domu nigdy nie była tak prosta! Uzupełnij puste ściany portretem rodzinnym, znanym na świecie obrazem lub inną grafiką na swój gust!",
+    "for-whom-text-3": "Wyróżnij swoje biuro, restauracje, kawiarnie niezapomnianą grafiką która przyciągnie uwagę klientów!",
+    "for-whom-title-3-1": "Wszystko ",
+    "for-whom-title-3-2": "zrobisz bez żadnych przygotowań podłoża!",
+
+    "faq": [
+        {
+            "id": 1,
+            "question": "Rozmiary druku?",
+            "answer": "Maksymalna wysokość druku wynosi 190 cm. Szerokość druku prawie bez ograniczeń. Odległość od ścian po lewej stronie wynosi 10 cm oraz po prawej stronie to 40 cm. Odstęp od podłogi wynosi 40 cm oraz 28 cm od sufitu."
+        },
+        {
+            "id": 2,
+            "question": "Czy potrzebne specjalne przygotowania przed drukiem?",
+            "answer": "Nie. Jesteśmy w stanie drukować prawie na każdej powierzchni a wiec nie ma potrzeby przygotowywać ścianę przed drukiem."
+        },
+        {
+            "id": 3,
+            "question": "Jaką trwałość ma wydrukowany obrazek?",
+            "answer": "Na każdy druk dajemy gwarancje trwałości 10 lat wewnątrz pomieszczeń. Gwarancja nie dotyczy uszkodzeń mechanicznych."
+        },
+        {
+            "id": 4,
+            "question": "Jaką grafikę mogę wybrać?",
+            "answer": "Prawie każdą. Jesteś my w stanie nadrukować dowolną grafikę. Pod warunkiem że wybrana grafika będzie w miarę dobrej jakości. Dla sprawdzenia grafiki prosimy o wysłanie pliku na adres meilowy wilando.art@gmail.com. Nasi pracownicy sprawdzą i doradzą odnośnie wybranej grafiki."
+        },
+        {
+            "id": 5,
+            "question": "Ile trwa druk na miejscu?",
+            "answer": "Szybkość druku to 45 minut na 1 m2 + około godziny przygotowanie sprzętu (ze wniesieniem)."
+        },
+        {
+            "id": 6,
+            "question": "Jaką farbą drukowane?",
+            "answer": "Dla druku wykorzystujemy specjalne UV-atramenty które są ekologiczne, nietoksyczne oraz bezwonne po utwardzaniu. Bezpieczne dla ludzi oraz zwierząt."
+        }
+    ],
+
+    "price-list-text-1": "Cena każdego projektu wyceniana jest indywidualnie w zależności od wielu czynników takich jak rozmiar grafiki czy miejscowość itp.",
+    "price-list-text-2": "Szacunkowy koszt druku do 1m2 wynosi 350 zł netto + VAT. Cena jest wyliczona dla powiatu poznańskiego. Dla tego dla wyceny prosimy o podanie miejscowości gdzie ma być wykonany druk.",
+    "price-list-title-1": "Dla wyceny",
+    "price-list-title-2": "potrzebujemy:",
+    "price-list-li-1": "Wybraną grafikę (gdy już masz)",
+    "price-list-li-2": "Zdjęcie ściany wraz z podłogą",
+    "price-list-li-3": "Wymiary ściany (szerokość i wysokość od podłogi do sufitu)",
+    "price-list-li-4": "Miejscowość",
+    "price-list-li-5": "Jakiej wielkości ma być druk",
+
+    "contact-addres": "Adres",
+    "contact-email": "Email",
+    "contact-hours": "Godziny pracy biura",
+    "contact-work-hours": "Pon-Sub: 8:00-20:00",
+    "contact-name": "Imię",
+    "contact-phone": "Telefon",
+    "contact-message": "Wiadomość",
+    "contact-btn": "Wyślij",
+
+    "footer-about-us": "o nas",
+    "footer-about-us-text": "Druk ścienny to nowa technologia która pozwala drukować dokładne i wysokiej jakości obrazy na prawie każdej pionowej powierzchni wewnątrz lub zewnątrz pomieszczeń. Nasza drukarka pozwala drukować obrazy do 190 cm wysokości bez limitu szerokości. Wyjątkowość drukarki polega również na drukowaniu ekologicznymi, przyjaznymi dla środowiska i szybkoschnąncymi atramentami UV. Dzięki temu tusz wysycha błyskawicznie, nie pozostawiając smug ani zapachu.",
+    "footer-contact": "kontakt"
 }
