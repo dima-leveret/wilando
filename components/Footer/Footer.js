@@ -45,6 +45,24 @@ function Footer() {
           </div>
         </div>
       </div>
+
+      {/* <a href="https://realting.com" target="_blank">
+        <img
+          src="https://realting.com/2020/images/logos/for-partners/full-color.svg"
+          width="200"
+          height="51"
+          alt="Platforma nieruchomości Realting.com"
+        />
+      </a> */}
+
+      <a href="https://realting.com" target="_blank">
+        <img
+          src="https://realting.com/2020/images/logos/for-partners/88x31-gradient.svg"
+          width="88"
+          height="31"
+          alt="Realting.com"
+        />
+      </a>
       <DimaLeveret />
     </footer>
   );
